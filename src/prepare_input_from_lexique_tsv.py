@@ -12,7 +12,7 @@ df = pd.read_csv(sys.argv[1], sep='\t')
 
 # Only the ortho and phon columns are relevant, so we get rid of other columns
 print("Extracting ortho and phon columns...")
-minimalDf = df[["ortho","phon","nbhomoph"]] # word, phonetics, phonetics with syllabus decomposition
+minimalDf = df[["ortho","phon","syll"]] # word, phonetics, phonetics with syllabus decomposition
 
 # write to csv
 print("Writing to CSV file...")
