@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lexique to International Phonetics Alphabet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 0;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        input {
+            font-size: 1rem;
+            margin: 1rem;
+            padding: 0.5rem;
+            width: 20rem;
+            background-color: #f4f4f4;
+        }
+
+        button {
+            font-size: 1rem;
+            margin: 1rem;
+            padding: 0.5rem;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        #converted {
+            font-size: 1.5rem;
+            margin: 1rem;
+            padding: 0.5rem;
+            background-color: #f4f4f4;
+        }
+    </style>
+    <script>
+        const dictionary = {
+            // vowels
+            "a": "a",
+            "i": "i",
+            "y": "y",
+            "u": "u",
+            "o": "o",
+            "O": "ɔ",
+            "e": "e",
+            "E": "ɛ",
+            "°": "ə",
+            "2": "ø",
+            "9": "œ",
+            "5": "ɛ̃",
+            "1": "œ̃",
+            "@": "ɑ̃",
+            "§": "ɔ̃",
+            "3": "ə",
+
+            // semi-vowels
+            "j": "j",
+            "8": "ɥ",
+            "w": "w",
+
+            // consonants
+            "p": "p",
+            "b": "b",
+            "t": "t",
+            "d": "d",
+            "k": "k",
+            "g": "ɡ",
+            "f": "f",
+            "v": "v",
+            "s": "s",
+            "z": "z",
+            "S": "ʃ",
+            "Z": "ʒ",
+            "m": "m",
+            "n": "n",
+            "N": "ɲ",
+            "l": "l",
+            "R": "ʁ",
+            "x": "x",
+            "G": "ŋ",
+
+            // syllabus separation
+            "-": ".",
+        }
+        function convert() {
+            const input = document.getElementById('input');
+            const value = input.value.trim();
+            if (value === '') {
+                document.getElementById('converted').innerText = 'Please enter a value';
+                return;
+            }
+            let converted = "";
+            const inputChars = value.split('');
+            for (const c of inputChars) {
+                if (dictionary[c]) {
+                    converted += dictionary[c];
+                } else {
+                    converted += c;
+                }
+            }
+            converted = "\\" + converted + "\\";
+            document.getElementById('converted').innerText = converted;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>
+        Lexique to International Phonetics Alphabet
+    </h1>
+    <p>
+        Convert a word from the lexique to the International Phonetics Alphabet using the input below. For the Lexique
+        dictionary, refer to their <a href="http://www.lexique.org/?page_id=286">documentation</a>. For the
+        international dictionary, see this <a
+            href="https://fr.wikipedia.org/wiki/Aide:Alphabet_phon%C3%A9tique_fran%C3%A7ais">Wikipedia page</a>. You can
+        also take the examples from Lexique and look up their phonetic transcription in a dictionary.
+    </p>
+
+    <p>
+        Note: this is an approximation, and may not be 100% accurate.
+    </p>
+    <input type="text" id="input">
+    <button onclick="convert()">Convert</button>
+    <p id="converted">...</p>
+</body>
+
+</html>
