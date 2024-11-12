@@ -1,0 +1,87 @@
+Preparing the data...
+Number of samples: 10000
+Number of unique input tokens: 70
+Number of unique output tokens: 91
+Max sequence length for inputs: 14
+Max sequence length for outputs: 59
+Restoring the model and running inference...
+Decoding sentences...
+-0-
+Input sentence: Go.
+Decoded sentence: Dégage !
+
+-1-
+Input sentence: Go.
+Decoded sentence: Dégage !
+
+-2-
+Input sentence: Go.
+Decoded sentence: Dégage !
+
+-3-
+Input sentence: Go.
+Decoded sentence: Dégage !
+
+-4-
+Input sentence: Hi.
+Decoded sentence: Salut !
+
+-5-
+Input sentence: Hi.
+Decoded sentence: Salut !
+
+-6-
+Input sentence: Run!
+Decoded sentence: Fuyez !
+
+-7-
+Input sentence: Run!
+Decoded sentence: Fuyez !
+
+-8-
+Input sentence: Run!
+Decoded sentence: Fuyez !
+
+-9-
+Input sentence: Run!
+Decoded sentence: Fuyez !
+
+-10-
+Input sentence: Run!
+Decoded sentence: Fuyez !
+
+-11-
+Input sentence: Run!
+Decoded sentence: Fuyez !
+
+-12-
+Input sentence: Run!
+Decoded sentence: Fuyez !
+
+-13-
+Input sentence: Run!
+Decoded sentence: Fuyez !
+
+-14-
+Input sentence: Run.
+Decoded sentence: Filez !
+
+-15-
+Input sentence: Run.
+Decoded sentence: Filez !
+
+-16-
+Input sentence: Run.
+Decoded sentence: Filez !
+
+-17-
+Input sentence: Run.
+Decoded sentence: Filez !
+
+-18-
+Input sentence: Run.
+Decoded sentence: Filez !
+
+-19-
+Input sentence: Run.
+Decoded sentence: Filez !
