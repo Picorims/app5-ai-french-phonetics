@@ -16,6 +16,11 @@
 import os
 os.environ["KERAS_BACKEND"] = "torch"
 
+print("Using torch as backend, available devices:")
+import torch
+for i in range(torch.cuda.device_count()):
+   print(torch.cuda.get_device_properties(i).name)
+
 import numpy as np
 import keras
 from pathlib import Path
