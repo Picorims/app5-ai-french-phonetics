@@ -1,5 +1,7 @@
 # PROJECT SPECIFIC ===
 /out
+/src/experiments/fra-eng
+/src/experiments/fra-eng.zip
 # ===
 
 # Byte-compiled / optimized / DLL files
