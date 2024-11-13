@@ -19,9 +19,9 @@ dirpath = Path(__file__).parent.absolute()
 
 # (see https://machinelearningmastery.com/gentle-introduction-mini-batch-gradient-descent-configure-batch-size/)
 batch_size = 64  # Batch size for training. (bigger batch size = faster training, but less accurate)
-epochs = 10  # Number of epochs to train for. (an epoch is a full iteration over samples, so the bigger, the more accurate and the slower the training is)
+epochs = 100  # Number of epochs to train for. (an epoch is a full iteration over samples, so the bigger, the more accurate and the slower the training is)
 latent_dim = 256  # Latent dimensionality of the encoding space. (number of LSTMs in layer? TODO: search)
-num_samples = 1000  # Number of samples to train on.
+num_samples = 10000  # Number of samples to train on.
 test_samples_start = math.floor(num_samples * 0.8)
 # Path to the data txt file on disk.
 print("Using randomized csv with seed: 1")
@@ -209,6 +209,11 @@ for seq_index in range(test_samples_start, num_samples):
 
     input_seq = mi.encode_text(input_text, max_decoder_seq_length, restored_input_token_index)
     decoded_sentence = mi.decode_sequence(input_seq, encoder_model, decoder_model, model_name, restored_target_token_index)
+    
+    # trim whitespaces
+    decoded_sentence = decoded_sentence.strip()
+    target_text = target_text.strip()
+    
     success = decoded_sentence == target_text
     input_length = len(input_text)
     decoded_length = len(decoded_sentence)
@@ -216,7 +221,7 @@ for seq_index in range(test_samples_start, num_samples):
     spaces_tab_input = " " * max(0,(25 - input_length))
     spaces_tab_decoded = " " * max(0,(20 - decoded_length))
     spaces_tab_target = " " * max(0,(20 - target_length))
-    print(f"{input_text + spaces_tab_input} -> {decoded_sentence.replace("\n","") + spaces_tab_decoded},expect: {target_text + spaces_tab_target}, pass: {successes}")
+    print(f"{input_text + spaces_tab_input} -> {decoded_sentence.replace("\n","") + spaces_tab_decoded},expect: {target_text + spaces_tab_target}, pass: {success}")
     
     count += 1
     if success:
