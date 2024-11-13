@@ -19,6 +19,11 @@ New B., Pallier C., Ferrand L., Matos R. (2001) Une base de données lexicales d
 - Pandas
 - Keras 3
 
+## Usage
+
+All python scripts shall be executed from the repository root.
+- train_model.py: train the model based on a csv file.
+
 ## Resources
 
 - https://www.youtube.com/watch?v=AsNTP8Kwu80
