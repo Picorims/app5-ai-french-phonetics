@@ -17,11 +17,13 @@ minimalDf = df[["ortho","phon","syll"]] # word, phonetics, phonetics with syllab
 # Create a variant with randomized order
 # see: https://stackoverflow.com/questions/29576430/shuffle-dataframe-rows
 print("Creating a variant with randomized order...")
-randomizedMinimalDf = minimalDf.copy().sample(frac=1).reset_index(drop=True)
+# random state is the seed
+seed = 1
+randomizedMinimalDf = minimalDf.copy().sample(frac=1, random_state=seed).reset_index(drop=True)
 
 # write to csv
 print("Writing to CSV file...")
 if not os.path.exists('out'):
     os.makedirs('out')
 minimalDf.to_csv('out/lexique_minimal.csv', index=False)
-randomizedMinimalDf.to_csv('out/lexique_minimal_randomized.csv', index=False)
+randomizedMinimalDf.to_csv(f'out/lexique_minimal_seed-{seed}.csv', index=False)
