@@ -25,7 +25,7 @@ num_samples = 1000  # Number of samples to train on.
 test_samples_start = math.floor(num_samples * 0.8)
 # Path to the data txt file on disk.
 print("Using randomized csv with seed: 1")
-data_path = os.path.join(dirpath, "..", "out", "lexique_minimal_seed-1.csv")
+data_path = os.path.join(dirpath, "..", "input_csv", "lexique_minimal_seed-1.csv")
 
 
 
