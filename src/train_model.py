@@ -11,6 +11,9 @@ os.environ["KERAS_BACKEND"] = "torch"
 import numpy as np
 import keras
 from pathlib import Path
+import math
+
+import _model_inference as mi
 
 dirpath = Path(__file__).parent.absolute()
 
@@ -19,6 +22,7 @@ batch_size = 64  # Batch size for training. (bigger batch size = faster training
 epochs = 10  # Number of epochs to train for. (an epoch is a full iteration over samples, so the bigger, the more accurate and the slower the training is)
 latent_dim = 256  # Latent dimensionality of the encoding space. (number of LSTMs in layer? TODO: search)
 num_samples = 1000  # Number of samples to train on.
+test_samples_start = math.floor(num_samples * 0.8)
 # Path to the data txt file on disk.
 print("Using randomized csv with seed: 1")
 data_path = os.path.join(dirpath, "..", "out", "lexique_minimal_seed-1.csv")
@@ -40,8 +44,10 @@ input_characters.add(" ")
 target_characters.add(" ")
 with open(data_path, "r", encoding="utf-8") as f:
     lines = f.read().split("\n")
+    # remove header line
+    lines = lines[1:]
 # 1: and num_sample+1 are here to ignore the headers line of the csv file
-for line in lines[1 : min(num_samples+1, len(lines) - 1)]:
+for line in lines[: min(test_samples_start, len(lines) - 1)]:
     input_text, target_text, _ = line.split(",")
     
     # We use "tab" as the "start sequence" character
@@ -60,10 +66,10 @@ input_characters = sorted(list(input_characters))
 target_characters = sorted(list(target_characters))
 num_encoder_tokens = len(input_characters) # each character is a token
 num_decoder_tokens = len(target_characters)
-# max_encoder_seq_length = max([len(txt) for txt in input_texts])
-# max_decoder_seq_length = max([len(txt) for txt in target_texts])
-max_encoder_seq_length = 64
-max_decoder_seq_length = 64
+max_encoder_seq_length = max([len(txt) for txt in input_texts])
+max_decoder_seq_length = max([len(txt) for txt in target_texts])
+# max_encoder_seq_length = 64
+# max_decoder_seq_length = 64
 
 print("Number of samples:", len(input_texts))
 print("Number of unique input tokens:", num_encoder_tokens)
@@ -158,4 +164,56 @@ model.fit(
 # Save model
 if not os.path.exists('models'):
     os.makedirs('models')
-model.save(os.path.join(dirpath, "..", "models", f"fr2phon_{batch_size}b_{epochs}e_{num_samples}s_{latent_dim}ld_{max_encoder_seq_length}esl_{max_decoder_seq_length}dsl_seed-1.keras"))
+model_name = f"fr2phon_{batch_size}b_{epochs}e_{num_samples}s_{latent_dim}ld_{max_encoder_seq_length}esl_{max_decoder_seq_length}dsl_seed-1.keras"
+model.save(os.path.join(dirpath, "..", "models", model_name))
+
+
+
+
+
+
+# === test the model ===
+print("Testing the model...")
+encoder_model, decoder_model, _ = mi.restore_model(model_name, dirpath)
+
+for seq_index in range(20):
+    # Take one sequence (part of the training set)
+    # for trying out decoding.
+    input_seq = encoder_input_data[seq_index : seq_index + 1]
+    decoded_sentence = mi.decode_sequence(input_seq, encoder_model, decoder_model, target_token_index, max_decoder_seq_length)
+    print(f"-{seq_index}-")
+    print("Input sentence:", input_texts[seq_index])
+    print("Decoded sentence:", decoded_sentence)
+    
+print("================================================")
+print("================================================")
+print("================================================")
+
+count = 0
+successes = 0
+failures = 0
+
+for seq_index in range(test_samples_start, num_samples):
+    # trying out decoding.
+    
+    input_text, target_text, _ = lines[seq_index].split(",")
+
+    input_seq = mi.encode_text(input_text, max_decoder_seq_length, input_token_index)
+    decoded_sentence = mi.decode_sequence(input_seq, encoder_model, decoder_model, target_token_index, max_decoder_seq_length)
+    success = decoded_sentence == target_text
+    input_length = len(input_text)
+    decoded_length = len(decoded_sentence)
+    target_length = len(target_text)
+    spaces_tab_input = " " * max(0,(25 - input_length))
+    spaces_tab_decoded = " " * max(0,(20 - decoded_length))
+    spaces_tab_target = " " * max(0,(20 - target_length))
+    print(f"{input_text + spaces_tab_input} -> {decoded_sentence.replace("\n","") + spaces_tab_decoded},expect: {target_text + spaces_tab_target}, pass: {successes}")
+    
+    count += 1
+    if success:
+        successes += 1
+    else:
+        failures += 1
+        
+print(f"Successes: {successes}/{count}, ratio: {successes/count}")
+print(f"Failures: {failures}/{count}")
