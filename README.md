@@ -18,3 +18,10 @@ New B., Pallier C., Ferrand L., Matos R. (2001) Une base de données lexicales d
 - Pytorch (https://pytorch.org/get-started/locally/#supported-windows-distributions for Windows installation scripts)
 - Pandas
 - Keras 3
+
+## Resources
+
+- https://www.youtube.com/watch?v=AsNTP8Kwu80
+- https://www.youtube.com/watch?v=YCzL96nL7j0
+- https://www.youtube.com/watch?v=viZrOnJclY0
+- https://www.youtube.com/watch?v=L8HKweZIOmg
