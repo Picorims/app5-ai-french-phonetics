@@ -162,32 +162,40 @@ model.fit(
     validation_split=0.2, # fraction of validation data
 )
 # Save model
+print("Saving the model...")
 if not os.path.exists('models'):
     os.makedirs('models')
 model_name = f"fr2phon_{batch_size}b_{epochs}e_{num_samples}s_{latent_dim}ld_{max_encoder_seq_length}esl_{max_decoder_seq_length}dsl_seed-1.keras"
 model.save(os.path.join(dirpath, "..", "models", model_name))
 
-
+print("Model saved as", model_name)
+# Save tokens
+print("Saving tokens...")
+with open(os.path.join(dirpath, "..", "models", model_name + ".input.tokens"), "w", encoding="utf-8") as f:
+    f.write(";".join(f"{i},{char}" for i, char in input_token_index.items()))
+with open(os.path.join(dirpath, "..", "models", model_name + ".target.tokens"), "w", encoding="utf-8") as f:
+    f.write(";".join(f"{i},{char}" for i, char in target_token_index.items()))
 
 
 
 
 # === test the model ===
 print("Testing the model...")
-encoder_model, decoder_model, _ = mi.restore_model(model_name, dirpath)
+encoder_model, decoder_model = mi.restore_model(model_name, dirpath)
+restored_target_token_index = mi.restore_target_token_index(model_name, dirpath)
 
-for seq_index in range(20):
-    # Take one sequence (part of the training set)
-    # for trying out decoding.
-    input_seq = encoder_input_data[seq_index : seq_index + 1]
-    decoded_sentence = mi.decode_sequence(input_seq, encoder_model, decoder_model, target_token_index, max_decoder_seq_length)
-    print(f"-{seq_index}-")
-    print("Input sentence:", input_texts[seq_index])
-    print("Decoded sentence:", decoded_sentence)
+# for seq_index in range(20):
+#     # Take one sequence (part of the training set)
+#     # for trying out decoding.
+#     input_seq = encoder_input_data[seq_index : seq_index + 1]
+#     decoded_sentence = mi.decode_sequence(input_seq, encoder_model, decoder_model, target_token_index, max_decoder_seq_length)
+#     print(f"-{seq_index}-")
+#     print("Input sentence:", input_texts[seq_index])
+#     print("Decoded sentence:", decoded_sentence)
     
-print("================================================")
-print("================================================")
-print("================================================")
+# print("================================================")
+# print("================================================")
+# print("================================================")
 
 count = 0
 successes = 0
@@ -199,7 +207,7 @@ for seq_index in range(test_samples_start, num_samples):
     input_text, target_text, _ = lines[seq_index].split(",")
 
     input_seq = mi.encode_text(input_text, max_decoder_seq_length, input_token_index)
-    decoded_sentence = mi.decode_sequence(input_seq, encoder_model, decoder_model, target_token_index, max_decoder_seq_length)
+    decoded_sentence = mi.decode_sequence(input_seq, encoder_model, decoder_model, model_name, restored_target_token_index)
     success = decoded_sentence == target_text
     input_length = len(input_text)
     decoded_length = len(decoded_sentence)

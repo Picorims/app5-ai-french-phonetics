@@ -10,8 +10,7 @@ def restore_model(name, dirpath):
     model = keras.models.load_model(os.path.join(dirpath,"..","models",name))
 
     latent_dim = int(name.split("_")[4][:-2])
-    max_decoder_seq_length = int(name.split("_")[6][:-3])
-    print(f"latent_dim: {latent_dim}, max_decoder_seq_length: {max_decoder_seq_length}")
+    print(f"latent_dim: {latent_dim}")
     
     # h = hidden state (working memory), c = cell state (long term memory)
 
@@ -35,10 +34,25 @@ def restore_model(name, dirpath):
         [decoder_inputs] + decoder_states_inputs, [decoder_outputs] + decoder_states,
     )
     
-    return (encoder_model, decoder_model, max_decoder_seq_length)
+    return (encoder_model, decoder_model)
 
+def restore_target_token_index(model_name, dirpath):
+    target_token_index = dict()
+    with open(os.path.join(dirpath,"..","models",model_name+".target.tokens"), "r", encoding="utf-8") as f:
+        file_str = f.read()
+        # print("===========")
+        # print(file_str)
+        # print("===========")
+        tokens = file_str.split(";")
+        for token in tokens:
+            token, i = token.split(",")
+            target_token_index[token] = int(i)
+    return target_token_index
 
-def decode_sequence(input_seq, encoder_model, decoder_model, target_token_index, max_decoder_seq_length):
+def decode_sequence(input_seq, encoder_model, decoder_model, model_name, target_token_index):
+    # retrieve token info
+    max_decoder_seq_length = int(model_name.split("_")[6][:-3])
+    
     # Reverse-lookup token index to decode sequences back to
     # something readable.
     # reverse_input_char_index = dict((i, char) for char, i in input_token_index.items())
