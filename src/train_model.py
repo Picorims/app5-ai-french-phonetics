@@ -19,9 +19,9 @@ dirpath = Path(__file__).parent.absolute()
 
 # (see https://machinelearningmastery.com/gentle-introduction-mini-batch-gradient-descent-configure-batch-size/)
 batch_size = 64  # Batch size for training. (bigger batch size = faster training, but less accurate)
-epochs = 100  # Number of epochs to train for. (an epoch is a full iteration over samples, so the bigger, the more accurate and the slower the training is)
+epochs = 120  # Number of epochs to train for. (an epoch is a full iteration over samples, so the bigger, the more accurate and the slower the training is)
 latent_dim = 256  # Latent dimensionality of the encoding space. (number of LSTMs in layer? TODO: search)
-num_samples = 10000  # Number of samples to train on.
+num_samples = 20000  # Number of samples to train on.
 test_samples_start = math.floor(num_samples * 0.8)
 # Path to the data txt file on disk.
 print("Using randomized csv with seed: 1")
@@ -178,7 +178,7 @@ with open(os.path.join(dirpath, "..", "models", model_name + ".target.tokens"), 
 
 
 
-
+# TODO factoring with test_n_from.py
 # === test the model ===
 print("Testing the model...")
 encoder_model, decoder_model, _ = mi.restore_model(model_name, dirpath)
