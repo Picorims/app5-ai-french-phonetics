@@ -42,6 +42,7 @@ count = 0
 successes = 0
 failures = 0
 similarities = []
+out_file_lines = []
 
 for seq_index in range(from_, from_ + n):
     # trying out decoding.
@@ -71,11 +72,17 @@ for seq_index in range(from_, from_ + n):
     spaces_tab_input = " " * max(0,(25 - input_length))
     spaces_tab_decoded = " " * max(0,(20 - decoded_length))
     spaces_tab_target = " " * max(0,(20 - target_length))
-    print(f"-{seq_index}, {seq_index-from_}- {input_text + spaces_tab_input} -> {decoded_sentence.replace("\n","") + spaces_tab_decoded},expect: {target_text + spaces_tab_target}, pass: {success}")
     
+    log_line = f"-{seq_index}, {seq_index-from_}- {input_text + spaces_tab_input} -> {decoded_sentence.replace("\n","") + spaces_tab_decoded},expect: {target_text + spaces_tab_target}, pass: {success}"
+    print(log_line)
+    out_file_lines.append(log_line)
         
-print(f"Successes: {successes}/{count}, ratio: {successes/count}")
-print(f"Failures: {failures}/{count}")
+log_line = f"Successes: {successes}/{count}, percent: {(successes/count) * 100}%"
+print(log_line)
+out_file_lines.append(log_line)
+log_line = f"Failures: {failures}/{count}"
+print(log_line)
+out_file_lines.append(log_line)
 
 # computing median similarity
 
@@ -86,4 +93,11 @@ if n % 2 == 0:
 else:
     median = similarities[n//2]
     
-print(f"Median similarity: {median}")
+log_line = f"Median similarity: {median}"
+print(log_line)
+out_file_lines.append(log_line)
+
+if not os.path.exists(os.path.join(dirpath, "..", "tests_results")):
+    os.makedirs(os.path.join(dirpath, "..", "tests_results"))
+with open(os.path.join(dirpath, "..", "tests_results", f"test_{n}n_{from_}f__{model_name}.txt"), "w", encoding="utf-8") as f:
+    f.write("\n".join(out_file_lines))
