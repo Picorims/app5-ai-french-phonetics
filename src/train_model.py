@@ -12,6 +12,7 @@ import numpy as np
 import keras
 from pathlib import Path
 import math
+import sys
 
 import _model_inference as mi
 
@@ -19,10 +20,40 @@ dirpath = Path(__file__).parent.absolute()
 
 # (see https://machinelearningmastery.com/gentle-introduction-mini-batch-gradient-descent-configure-batch-size/)
 batch_size = 64  # Batch size for training. (bigger batch size = faster training, but less accurate)
-epochs = 120  # Number of epochs to train for. (an epoch is a full iteration over samples, so the bigger, the more accurate and the slower the training is)
+epochs = 10  # Number of epochs to train for. (an epoch is a full iteration over samples, so the bigger, the more accurate and the slower the training is)
 latent_dim = 256  # Latent dimensionality of the encoding space. (number of LSTMs in layer? TODO: search)
-num_samples = 20000  # Number of samples to train on.
+num_samples = 1000  # Number of samples to train on.
+
+do_test_after_training = 1
+
+# overriding defaults with command line arguments
+if len(sys.argv) > 1:
+    if (len(sys.argv) - 1) % 2 != 0:
+        print("Usage: python train_model.py <param_name> <param_value> ...")
+        sys.exit(1)
+        
+    for i in range(1, len(sys.argv), 2):
+        param = sys.argv[i]
+        value = sys.argv[i+1]
+        if (param == "-b"):
+            batch_size = int(value)
+        elif (param == "-e"):
+            epochs = int(value)
+        elif (param == "-s"):
+            num_samples = int(value)
+        elif(param == "-t"):
+            do_test_after_training = int(value)
+        else:
+            print(f"Unknown parameter: {param}")
+            sys.exit(1)
+
 test_samples_start = math.floor(num_samples * 0.8)
+
+# print config
+print(f"batch_size: {batch_size}")
+print(f"epochs: {epochs}")
+print(f"num_samples: {num_samples}")
+
 # Path to the data txt file on disk.
 print("Using randomized csv with seed: 1")
 data_path = os.path.join(dirpath, "..", "input_csv", "lexique_minimal_seed-1.csv")
@@ -176,10 +207,13 @@ with open(os.path.join(dirpath, "..", "models", model_name + ".input.tokens"), "
 with open(os.path.join(dirpath, "..", "models", model_name + ".target.tokens"), "w", encoding="utf-8") as f:
     f.write(";".join(f"{i},{char}" for i, char in target_token_index.items()))
 
-
+print("Data saved.")
 
 # TODO factoring with test_n_from.py
 # === test the model ===
+if (do_test_after_training == 0):
+    sys.exit(0)
+
 print("Testing the model...")
 encoder_model, decoder_model, _ = mi.restore_model(model_name, dirpath)
 restored_target_token_index = mi.restore_token_index(model_name, dirpath, "target")
