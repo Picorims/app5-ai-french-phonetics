@@ -47,12 +47,15 @@ if len(sys.argv) > 1:
             print(f"Unknown parameter: {param}")
             sys.exit(1)
 
-test_samples_start = math.floor(num_samples * 0.8)
+test_samples_start = math.floor(num_samples * 0.9)
 
 # print config
-print(f"batch_size: {batch_size}")
-print(f"epochs: {epochs}")
-print(f"num_samples: {num_samples}")
+print(f"- batch_size: {batch_size}")
+print(f"- epochs: {epochs}")
+print(f"- num_samples (total): {num_samples}")
+print(f"  * for training: {math.floor(0.8 * (test_samples_start))}")
+print(f"  * for validation: {math.floor(0.2 * (test_samples_start))}")
+print(f"  * for testing (used if testing enabled, excluded from training in all cases): {num_samples - test_samples_start}")
 
 # Path to the data txt file on disk.
 print("Using randomized csv with seed: 1")
@@ -102,7 +105,7 @@ max_decoder_seq_length = max([len(txt) for txt in target_texts])
 # max_encoder_seq_length = 64
 # max_decoder_seq_length = 64
 
-print("Number of samples:", len(input_texts))
+# print("Number of samples:", len(input_texts))
 print("Number of unique input tokens:", num_encoder_tokens)
 print("Number of unique output tokens:", num_decoder_tokens)
 print("Max sequence length for inputs:", max_encoder_seq_length)
@@ -196,7 +199,7 @@ model.fit(
 print("Saving the model...")
 if not os.path.exists('models'):
     os.makedirs('models')
-model_name = f"fr2phon_{batch_size}b_{epochs}e_{num_samples}s_{latent_dim}ld_{max_encoder_seq_length}esl_{max_decoder_seq_length}dsl_seed-1.keras"
+model_name = f"fr2phon_{batch_size}b_{epochs}e_{num_samples}s_{latent_dim}ld_{max_encoder_seq_length}esl_{max_decoder_seq_length}dsl_seed-1_0.1tv.keras"
 model.save(os.path.join(dirpath, "..", "models", model_name))
 
 print("Model saved as", model_name)
