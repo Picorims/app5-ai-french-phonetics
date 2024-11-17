@@ -23,7 +23,7 @@ randomizedMinimalDf = minimalDf.copy().sample(frac=1, random_state=seed).reset_i
 
 # write to csv
 print("Writing to CSV file...")
-if not os.path.exists('out'):
-    os.makedirs('out')
-minimalDf.to_csv('out/lexique_minimal.csv', index=False)
-randomizedMinimalDf.to_csv(f'out/lexique_minimal_seed-{seed}.csv', index=False)
+if not os.path.exists('input_csv'):
+    os.makedirs('input_csv')
+minimalDf.to_csv('input_csv/lexique_minimal.csv', index=False)
+randomizedMinimalDf.to_csv(f'input_csv/lexique_minimal_seed-{seed}.csv', index=False)

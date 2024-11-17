@@ -1,0 +1,1228 @@
+$ py ./src/train_model.py 
+Using randomized csv with seed: 1
+Preparing the data...
+Number of samples: 8000
+Number of unique input tokens: 40
+Number of unique output tokens: 39
+Max sequence length for inputs: 23
+Max sequence length for outputs: 19
+Building the model...
+Training the model...
+Epoch 1/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 9s 86ms/step - accuracy: 0.5858 - loss: 1.7799 - val_accuracy: 0.6696 - val_loss: 1.2652
+Epoch 2/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 45ms/step - accuracy: 0.6557 - loss: 1.2897 - val_accuracy: 0.6858 - val_loss: 1.1946
+Epoch 3/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 46ms/step - accuracy: 0.6788 - loss: 1.2041 - val_accuracy: 0.6961 - val_loss: 1.1242
+Epoch 4/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 4s 45ms/step - accuracy: 0.6972 - loss: 1.1353 - val_accuracy: 0.7120 - val_loss: 1.0598
+Epoch 5/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 45ms/step - accuracy: 0.7084 - loss: 1.0640 - val_accuracy: 0.7177 - val_loss: 0.9890
+Epoch 6/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 45ms/step - accuracy: 0.7176 - loss: 0.9938 - val_accuracy: 0.7338 - val_loss: 0.9264
+Epoch 7/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 4s 44ms/step - accuracy: 0.7287 - loss: 0.9305 - val_accuracy: 0.7394 - val_loss: 0.8905
+Epoch 8/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 46ms/step - accuracy: 0.7474 - loss: 0.8689 - val_accuracy: 0.7586 - val_loss: 0.8206
+Epoch 9/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 47ms/step - accuracy: 0.7593 - loss: 0.8196 - val_accuracy: 0.7583 - val_loss: 0.8099
+Epoch 10/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 47ms/step - accuracy: 0.7652 - loss: 0.7930 - val_accuracy: 0.7713 - val_loss: 0.7674
+Epoch 11/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 4s 44ms/step - accuracy: 0.7748 - loss: 0.7599 - val_accuracy: 0.7753 - val_loss: 0.7529
+Epoch 12/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 47ms/step - accuracy: 0.7826 - loss: 0.7302 - val_accuracy: 0.7855 - val_loss: 0.7183
+Epoch 13/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 52ms/step - accuracy: 0.7887 - loss: 0.7055 - val_accuracy: 0.7906 - val_loss: 0.7007
+Epoch 14/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 53ms/step - accuracy: 0.7966 - loss: 0.6817 - val_accuracy: 0.8017 - val_loss: 0.6700
+Epoch 15/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 51ms/step - accuracy: 0.8022 - loss: 0.6601 - val_accuracy: 0.8074 - val_loss: 0.6524
+Epoch 16/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 54ms/step - accuracy: 0.8077 - loss: 0.6383 - val_accuracy: 0.8071 - val_loss: 0.6473
+Epoch 17/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 54ms/step - accuracy: 0.8124 - loss: 0.6207 - val_accuracy: 0.8110 - val_loss: 0.6307
+Epoch 18/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 51ms/step - accuracy: 0.8143 - loss: 0.6088 - val_accuracy: 0.8133 - val_loss: 0.6203
+Epoch 19/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 48ms/step - accuracy: 0.8240 - loss: 0.5843 - val_accuracy: 0.8173 - val_loss: 0.6098
+Epoch 20/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 47ms/step - accuracy: 0.8252 - loss: 0.5712 - val_accuracy: 0.8199 - val_loss: 0.5949
+Epoch 21/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 48ms/step - accuracy: 0.8302 - loss: 0.5533 - val_accuracy: 0.8236 - val_loss: 0.5832
+Epoch 22/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 47ms/step - accuracy: 0.8372 - loss: 0.5316 - val_accuracy: 0.8278 - val_loss: 0.5730
+Epoch 23/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 47ms/step - accuracy: 0.8425 - loss: 0.5178 - val_accuracy: 0.8321 - val_loss: 0.5583
+Epoch 24/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 51ms/step - accuracy: 0.8493 - loss: 0.4951 - val_accuracy: 0.8312 - val_loss: 0.5670
+Epoch 25/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 48ms/step - accuracy: 0.8548 - loss: 0.4779 - val_accuracy: 0.8390 - val_loss: 0.5350
+Epoch 26/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 49ms/step - accuracy: 0.8548 - loss: 0.4716 - val_accuracy: 0.8413 - val_loss: 0.5244
+Epoch 27/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 50ms/step - accuracy: 0.8608 - loss: 0.4553 - val_accuracy: 0.8383 - val_loss: 0.5370
+Epoch 28/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 49ms/step - accuracy: 0.8637 - loss: 0.4418 - val_accuracy: 0.8460 - val_loss: 0.5180
+Epoch 29/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 49ms/step - accuracy: 0.8693 - loss: 0.4253 - val_accuracy: 0.8454 - val_loss: 0.5152
+Epoch 30/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 50ms/step - accuracy: 0.8721 - loss: 0.4184 - val_accuracy: 0.8434 - val_loss: 0.5224
+Epoch 31/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 49ms/step - accuracy: 0.8753 - loss: 0.4034 - val_accuracy: 0.8491 - val_loss: 0.5027
+Epoch 32/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 52ms/step - accuracy: 0.8825 - loss: 0.3819 - val_accuracy: 0.8491 - val_loss: 0.5070
+Epoch 33/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 47ms/step - accuracy: 0.8849 - loss: 0.3719 - val_accuracy: 0.8495 - val_loss: 0.5048
+Epoch 34/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 46ms/step - accuracy: 0.8891 - loss: 0.3575 - val_accuracy: 0.8524 - val_loss: 0.4970
+Epoch 35/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 47ms/step - accuracy: 0.8925 - loss: 0.3449 - val_accuracy: 0.8502 - val_loss: 0.5084
+Epoch 36/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 47ms/step - accuracy: 0.8996 - loss: 0.3263 - val_accuracy: 0.8562 - val_loss: 0.4912
+Epoch 37/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 49ms/step - accuracy: 0.9028 - loss: 0.3159 - val_accuracy: 0.8580 - val_loss: 0.4863
+Epoch 38/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 50ms/step - accuracy: 0.9057 - loss: 0.3035 - val_accuracy: 0.8593 - val_loss: 0.4772
+Epoch 39/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 50ms/step - accuracy: 0.9104 - loss: 0.2877 - val_accuracy: 0.8601 - val_loss: 0.4799
+Epoch 40/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 49ms/step - accuracy: 0.9126 - loss: 0.2829 - val_accuracy: 0.8645 - val_loss: 0.4764
+Epoch 41/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 48ms/step - accuracy: 0.9188 - loss: 0.2630 - val_accuracy: 0.8562 - val_loss: 0.4983
+Epoch 42/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 48ms/step - accuracy: 0.9215 - loss: 0.2553 - val_accuracy: 0.8590 - val_loss: 0.4865
+Epoch 43/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 50ms/step - accuracy: 0.9258 - loss: 0.2425 - val_accuracy: 0.8643 - val_loss: 0.4853
+Epoch 44/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 47ms/step - accuracy: 0.9288 - loss: 0.2317 - val_accuracy: 0.8658 - val_loss: 0.4793
+Epoch 45/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 47ms/step - accuracy: 0.9327 - loss: 0.2198 - val_accuracy: 0.8651 - val_loss: 0.4911
+Epoch 46/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 47ms/step - accuracy: 0.9362 - loss: 0.2089 - val_accuracy: 0.8653 - val_loss: 0.4876
+Epoch 47/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 48ms/step - accuracy: 0.9390 - loss: 0.1973 - val_accuracy: 0.8658 - val_loss: 0.4893
+Epoch 48/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 46ms/step - accuracy: 0.9440 - loss: 0.1867 - val_accuracy: 0.8694 - val_loss: 0.4958
+Epoch 49/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 48ms/step - accuracy: 0.9458 - loss: 0.1763 - val_accuracy: 0.8686 - val_loss: 0.4813
+Epoch 50/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 48ms/step - accuracy: 0.9512 - loss: 0.1634 - val_accuracy: 0.8674 - val_loss: 0.4922
+Epoch 51/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 47ms/step - accuracy: 0.9548 - loss: 0.1523 - val_accuracy: 0.8670 - val_loss: 0.4985
+Epoch 52/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 47ms/step - accuracy: 0.9549 - loss: 0.1485 - val_accuracy: 0.8694 - val_loss: 0.4991
+Epoch 53/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 48ms/step - accuracy: 0.9594 - loss: 0.1375 - val_accuracy: 0.8717 - val_loss: 0.4969
+Epoch 54/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 47ms/step - accuracy: 0.9616 - loss: 0.1307 - val_accuracy: 0.8714 - val_loss: 0.5033
+Epoch 55/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 47ms/step - accuracy: 0.9633 - loss: 0.1245 - val_accuracy: 0.8684 - val_loss: 0.5124
+Epoch 56/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 48ms/step - accuracy: 0.9661 - loss: 0.1159 - val_accuracy: 0.8698 - val_loss: 0.5165
+Epoch 57/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 48ms/step - accuracy: 0.9691 - loss: 0.1095 - val_accuracy: 0.8701 - val_loss: 0.5225
+Epoch 58/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 50ms/step - accuracy: 0.9718 - loss: 0.1013 - val_accuracy: 0.8724 - val_loss: 0.5221
+Epoch 59/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 49ms/step - accuracy: 0.9729 - loss: 0.0970 - val_accuracy: 0.8722 - val_loss: 0.5248
+Epoch 60/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 49ms/step - accuracy: 0.9765 - loss: 0.0866 - val_accuracy: 0.8732 - val_loss: 0.5318
+Epoch 61/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 54ms/step - accuracy: 0.9766 - loss: 0.0845 - val_accuracy: 0.8724 - val_loss: 0.5286
+Epoch 62/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 51ms/step - accuracy: 0.9794 - loss: 0.0777 - val_accuracy: 0.8728 - val_loss: 0.5388
+Epoch 63/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 53ms/step - accuracy: 0.9794 - loss: 0.0765 - val_accuracy: 0.8726 - val_loss: 0.5523
+Epoch 64/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 6s 56ms/step - accuracy: 0.9805 - loss: 0.0726 - val_accuracy: 0.8734 - val_loss: 0.5372
+Epoch 65/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 6s 55ms/step - accuracy: 0.9824 - loss: 0.0681 - val_accuracy: 0.8716 - val_loss: 0.5599
+Epoch 66/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 52ms/step - accuracy: 0.9842 - loss: 0.0619 - val_accuracy: 0.8750 - val_loss: 0.5577
+Epoch 67/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 52ms/step - accuracy: 0.9851 - loss: 0.0598 - val_accuracy: 0.8703 - val_loss: 0.5730
+Epoch 68/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 50ms/step - accuracy: 0.9853 - loss: 0.0594 - val_accuracy: 0.8735 - val_loss: 0.5686
+Epoch 69/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 49ms/step - accuracy: 0.9861 - loss: 0.0553 - val_accuracy: 0.8746 - val_loss: 0.5712
+Epoch 70/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 49ms/step - accuracy: 0.9883 - loss: 0.0494 - val_accuracy: 0.8743 - val_loss: 0.5726
+Epoch 71/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 49ms/step - accuracy: 0.9887 - loss: 0.0478 - val_accuracy: 0.8741 - val_loss: 0.5934
+Epoch 72/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 49ms/step - accuracy: 0.9888 - loss: 0.0468 - val_accuracy: 0.8755 - val_loss: 0.5807
+Epoch 73/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 50ms/step - accuracy: 0.9890 - loss: 0.0460 - val_accuracy: 0.8765 - val_loss: 0.5815
+Epoch 74/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 48ms/step - accuracy: 0.9903 - loss: 0.0421 - val_accuracy: 0.8740 - val_loss: 0.5899
+Epoch 75/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 49ms/step - accuracy: 0.9898 - loss: 0.0421 - val_accuracy: 0.8747 - val_loss: 0.6008
+Epoch 76/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 50ms/step - accuracy: 0.9916 - loss: 0.0373 - val_accuracy: 0.8719 - val_loss: 0.6111
+Epoch 77/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 48ms/step - accuracy: 0.9916 - loss: 0.0373 - val_accuracy: 0.8733 - val_loss: 0.6130
+Epoch 78/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 50ms/step - accuracy: 0.9917 - loss: 0.0360 - val_accuracy: 0.8752 - val_loss: 0.6147
+Epoch 79/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 46ms/step - accuracy: 0.9920 - loss: 0.0344 - val_accuracy: 0.8781 - val_loss: 0.5976
+Epoch 80/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 46ms/step - accuracy: 0.9942 - loss: 0.0288 - val_accuracy: 0.8737 - val_loss: 0.6239
+Epoch 81/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 47ms/step - accuracy: 0.9939 - loss: 0.0302 - val_accuracy: 0.8763 - val_loss: 0.6249
+Epoch 82/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 46ms/step - accuracy: 0.9937 - loss: 0.0288 - val_accuracy: 0.8780 - val_loss: 0.6248
+Epoch 83/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 46ms/step - accuracy: 0.9937 - loss: 0.0294 - val_accuracy: 0.8775 - val_loss: 0.6186
+Epoch 84/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 46ms/step - accuracy: 0.9933 - loss: 0.0295 - val_accuracy: 0.8780 - val_loss: 0.6127
+Epoch 85/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 45ms/step - accuracy: 0.9953 - loss: 0.0243 - val_accuracy: 0.8754 - val_loss: 0.6399
+Epoch 86/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 45ms/step - accuracy: 0.9948 - loss: 0.0248 - val_accuracy: 0.8740 - val_loss: 0.6479
+Epoch 87/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 48ms/step - accuracy: 0.9945 - loss: 0.0260 - val_accuracy: 0.8766 - val_loss: 0.6312
+Epoch 88/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 48ms/step - accuracy: 0.9954 - loss: 0.0231 - val_accuracy: 0.8764 - val_loss: 0.6514
+Epoch 89/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 48ms/step - accuracy: 0.9955 - loss: 0.0236 - val_accuracy: 0.8753 - val_loss: 0.6401
+Epoch 90/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 48ms/step - accuracy: 0.9957 - loss: 0.0214 - val_accuracy: 0.8761 - val_loss: 0.6530
+Epoch 91/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 48ms/step - accuracy: 0.9949 - loss: 0.0239 - val_accuracy: 0.8770 - val_loss: 0.6569
+Epoch 92/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 47ms/step - accuracy: 0.9957 - loss: 0.0207 - val_accuracy: 0.8778 - val_loss: 0.6516
+Epoch 93/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 47ms/step - accuracy: 0.9961 - loss: 0.0203 - val_accuracy: 0.8747 - val_loss: 0.6618
+Epoch 94/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 48ms/step - accuracy: 0.9959 - loss: 0.0205 - val_accuracy: 0.8769 - val_loss: 0.6492
+Epoch 95/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 47ms/step - accuracy: 0.9960 - loss: 0.0195 - val_accuracy: 0.8762 - val_loss: 0.6698
+Epoch 96/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 45ms/step - accuracy: 0.9961 - loss: 0.0191 - val_accuracy: 0.8761 - val_loss: 0.6720
+Epoch 97/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 46ms/step - accuracy: 0.9960 - loss: 0.0200 - val_accuracy: 0.8792 - val_loss: 0.6576
+Epoch 98/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 46ms/step - accuracy: 0.9960 - loss: 0.0182 - val_accuracy: 0.8741 - val_loss: 0.6764
+Epoch 99/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 46ms/step - accuracy: 0.9962 - loss: 0.0189 - val_accuracy: 0.8758 - val_loss: 0.6892
+Epoch 100/100
+100/100 ━━━━━━━━━━━━━━━━━━━━ 5s 47ms/step - accuracy: 0.9956 - loss: 0.0213 - val_accuracy: 0.8777 - val_loss: 0.6619
+
+
+incomplet:
+
+rédigeais                 -> ReZiREs            ,expect: RediZE              , pass: 0
+révisionnistes            -> RevisjOn           ,expect: Revizjonist         , pass: 0
+gelures                   -> g9l°Ry             ,expect: Z°lyR               , pass: 0
+troquets                  -> tRokyRE            ,expect: tRokE               , pass: 0
+déjouent                  -> deZun°Ra           ,expect: deZu                , pass: 0
+hanteur                   -> @t°R§              ,expect: @t9R                , pass: 0
+dotation                  -> dotolite           ,expect: dotasj§             , pass: 0
+rembourrait               -> R°buR°mE           ,expect: R@buRE              , pass: 0
+pentothal                 -> sEntonize          ,expect: p5total             , pass: 0
+muguet                    -> ymig@              ,expect: mygE                , pass: 0
+acheminâmes               -> aminasj§           ,expect: aS°minam            , pass: 0
+lourdingue                -> liRodonik          ,expect: luRd5g              , pass: 0
+ramone                    -> aRmone             ,expect: RamOn               , pass: 0
+orthographique            -> ORtipodeRik        ,expect: ORtogRafik          , pass: 0
+jouisseurs                -> guS°nOR            ,expect: Zwis9R              , pass: 0
+entretuaient              -> @tR°tin@           ,expect: @tR°t8E             , pass: 0
+affection                 -> afEktiv            ,expect: afEksj§             , pass: 0
+panouilles                -> ponanoRize         ,expect: panuj               , pass: 0
+légalisation              -> delEbtik°m@        ,expect: legalizasj§         , pass: 0
+écartelé                  -> etaRk°le           ,expect: ekaRt°le            , pass: 0
+fredonnons                -> fR§dona            ,expect: fR°don§             , pass: 0
+généticienne              -> ee5tyR°l@          ,expect: ZenetisjEn          , pass: 0
+sortira                   -> swER°R§            ,expect: sORtiRa             , pass: 0
+ajustées                  -> gat82              ,expect: aZyste              , pass: 0
+supposai                  -> supsjat            ,expect: sypozE              , pass: 0
+cataloguiez               -> katologRi          ,expect: katalogje           , pass: 0
+syndicalisme              -> sinalizapj§        ,expect: s5dikalizm          , pass: 0
+murer                     -> nyRER              ,expect: myRe                , pass: 0
+enchanteraient            -> @ktinER            ,expect: @S@t°RE             , pass: 0
+moufle                    -> mugybal            ,expect: mufl                , pass: 0
+maja                      -> mane               ,expect: maZa                , pass: 0
+retransmis                -> R°tRas             ,expect: R°tR@smi            , pass: 0
+troubles                  -> tRubOR             ,expect: tRubl               , pass: 0
+incus                     -> 5syb               ,expect: 5ky                 , pass: 0
+contentés                 -> k§t°nER            ,expect: k§t@te              , pass: 0
+travaillâmes              -> tRavajyR           ,expect: tRavajam            , pass: 0
+combattants               -> k§satabl           ,expect: k§bat@              , pass: 0
+injecté                   -> 5nEt8e             ,expect: 5ZEkte              , pass: 0
+déjeune                   -> deZyne             ,expect: deZ9n               , pass: 0
+vitrée                    -> 5pRev@             ,expect: vitRe               , pass: 0
+déchargera                -> deSaRZ°Ra          ,expect: deSaRZ°Ra           , pass: 0
+suivrai                   -> syviRise           ,expect: s8ivRE              , pass: 0
+gagnez                    -> gaN                ,expect: gaNe                , pass: 0
+saluèrent                 -> s@bliR§            ,expect: sal8ER              , pass: 0
+hallebardes               -> al@biR             ,expect: al°baRd             , pass: 0
+devinerais                -> d°vil°Rje          ,expect: d°vin°RE            , pass: 0
+démaquillage              -> demakylajER        ,expect: demakijaZ           , pass: 0
+salvatrice                -> salmogRaik         ,expect: salvatRis           , pass: 0
+clôturer                  -> solitROm           ,expect: klotyRe             , pass: 0
+ambitionné                -> anistokylist       ,expect: @bisjone            , pass: 0
+romans                    -> ORm@sa             ,expect: Rom@                , pass: 0
+cupronickel               -> suRnizaklist       ,expect: kypRonikEl          , pass: 0
+socques                   -> skuf§              ,expect: sOk                 , pass: 0
+sacque                    -> askdya             ,expect: sak                 , pass: 0
+plaidée                   -> plEj°Ra            ,expect: plede               , pass: 0
+ignames                   -> ZinasjOm           ,expect: iNam                , pass: 0
+érogènes                  -> egRon°ma           ,expect: eRoZEn              , pass: 0
+bidonnée                  -> liktylOm           ,expect: bidone              , pass: 0
+grêlon                    -> gRomE              ,expect: gREl§               , pass: 0
+kala-azar                 -> kaladyR            ,expect: kalaazaR            , pass: 0
+pusse                     -> pyske              ,expect: pys                 , pass: 0
+apologétique              -> apolidoRj§         ,expect: apoloZetik          , pass: 0
+composerait               -> k§spatRoR          ,expect: k§poz°RE            , pass: 0
+mimodrames                -> minomaRis          ,expect: mimodRam            , pass: 0
+redressées                -> R°sevR             ,expect: R°dRese             , pass: 0
+signé                     -> siNE               ,expect: siNe                , pass: 0
+retardez                  -> R°tRave            ,expect: R°taRde             , pass: 0
+agglomèrent               -> algaRij§           ,expect: aglomER             , pass: 0
+ardre                     -> adRe               ,expect: aRdR°               , pass: 0
+bouchée                   -> buS°Ra             ,expect: buSe                , pass: 0
+emporterais               -> @k§tRibER          ,expect: @pORt°RE            , pass: 0
+instrument                -> 5stRyktif          ,expect: 5stRym@             , pass: 0
+rengorger                 -> R@gORd°Ra          ,expect: R@gORZe             , pass: 0
+mystérieusement           -> 5stekiRkt9R        ,expect: misteRj2z°m@        , pass: 0
+diluvienne                -> difikkl5t          ,expect: dilyvjEn            , pass: 0
+stalags                   -> stalaZim           ,expect: stalag              , pass: 0
+analyse                   -> analize            ,expect: analiz              , pass: 0
+nôtre                     -> n§Z9R              ,expect: notR                , pass: 0
+kanji                     -> kaniG              ,expect: k@Zi                , pass: 0
+oranger                   -> ORd°R§             ,expect: oR@Ze               , pass: 0
+enorgueillisse            -> @gRupjER           ,expect: @nORg9jis           , pass: 0
+inscrit                   -> 5stRik             ,expect: 5skRi               , pass: 0
+exaucées                  -> Egzolete           ,expect: Egzose              , pass: 0
+ergonomie                 -> gRonozik           ,expect: ERgonomi            , pass: 0
+calmé                     -> kamyle             ,expect: kalme               , pass: 0
+abandonnions              -> al@tonje           ,expect: ab@donj§            , pass: 0
+poussées                  -> sufR               ,expect: puse                , pass: 0
+conforment                -> k§fOS°R§           ,expect: k§fORm              , pass: 0
+pilons                    -> piN§               ,expect: pil§                , pass: 0
+grenat                    -> ZERna              ,expect: gR°na               , pass: 0
+taxez                     -> tativ              ,expect: takse               , pass: 0
+greffer                   -> gREv°Ra            ,expect: gRefe               , pass: 0
+japonerie                 -> @gOl°Rje           ,expect: ZapOn°Ri            , pass: 0
+semblait                  -> s@sibE             ,expect: s@blE               , pass: 0
+faction                   -> faktiv             ,expect: faksj§              , pass: 0
+méta                      -> metal              ,expect: meta                , pass: 0
+violées                   -> viNaliR            ,expect: vjole               , pass: 0
+subtilisant               -> ybikstyniR         ,expect: syptiliz@           , pass: 0
+battue                    -> bEta               ,expect: baty                , pass: 0
+tendancieuses             -> t@t5gRast          ,expect: t@d@sj2z            , pass: 0
+cyrard                    -> siNoR°Ra           ,expect: siRaR               , pass: 0
+pratiquèrent              -> pRotikabl          ,expect: pRatikER            , pass: 0
+cilla                     -> siblan             ,expect: sija                , pass: 0
+entachent                 -> @t°m@              ,expect: @taS                , pass: 0
+oléine                    -> l§Z°R§             ,expect: olein               , pass: 0
+pile-poil                 -> filozefRi          ,expect: pilpwal             , pass: 0
+harassant                 -> aRase              ,expect: aRas@               , pass: 0
+quasi-monopole            -> kasinogER          ,expect: kazimOnOpOl         , pass: 0
+laquais                   -> lakoti             ,expect: lakE                , pass: 0
+rechignaient              -> R°Sis°R§           ,expect: R°SiNE              , pass: 0
+sambo                     -> s@blE              ,expect: sambo               , pass: 0
+flatta                    -> flatE              ,expect: flata               , pass: 0
+entrebâillerait           -> @tRibape           ,expect: @tR°baj°RE          , pass: 0
+décalent                  -> dekl@te            ,expect: dekal               , pass: 0
+ondoiements               -> §d§Zist            ,expect: §dwam@              , pass: 0
+syncopal                  -> sinapjoze          ,expect: s5kopal             , pass: 0
+prisée                    -> pRis°Re            ,expect: pRize               , pass: 0
+animés                    -> anise              ,expect: anime               , pass: 0
+colombages                -> solomotalik        ,expect: kol§baZ             , pass: 0
+mam                       -> maSi               ,expect: mam                 , pass: 0
+commentatrice             -> kozEstonetRi       ,expect: kom@tatRis          , pass: 0
+écopes                    -> ekOps              ,expect: ekOp                , pass: 0
+rafraîchie                -> aRbije             ,expect: RafReSi             , pass: 0
+moissonné                 -> ikonEmat2z         ,expect: mwasone             , pass: 0
+bandé                     -> blda               ,expect: b@de                , pass: 0
+classifient               -> plastinER          ,expect: klasifi             , pass: 0
+destructeurs              -> tyREspeR§          ,expect: destRykt9R          , pass: 0
+exhumées                  -> Egz8ig             ,expect: Egzyme              , pass: 0
+infirme                   -> 5fikyRE            ,expect: 5fiRm               , pass: 0
+co-pilote                 -> kosiflaRi          ,expect: kopilOt             , pass: 0
+opposèrent                -> OpsORnER§          ,expect: opozER              , pass: 0
+repavage                  -> R°paRZ             ,expect: R2pavaZ             , pass: 0
+sonnerais                 -> s§Z°RE             ,expect: sOn°RE              , pass: 0
+maintiendrons             -> m@tinkomER         ,expect: m5tj5dR§            , pass: 0
+maîtrisèrent              -> m5tRasjone         ,expect: mEtRizER            , pass: 0
+déchirèrent               -> desiReRE           ,expect: deSiRER             , pass: 0
+mêlécasse                 -> mezaZoRa           ,expect: mElekas             , pass: 0
+verdoyantes               -> vERtoljaR          ,expect: vERdwaj@t           , pass: 0
+gris-bleu                 -> gRigase            ,expect: gRibl2              , pass: 0
+cafeteur                  -> askyRE             ,expect: kaf°t9R             , pass: 0
+braseros                  -> bERs°RE            ,expect: bRazeRo             , pass: 0
+notèrent                  -> nOstoRje           ,expect: notER               , pass: 0
+stylet                    -> stiliz@            ,expect: stilE               , pass: 0
+aboutait                  -> abotid9R           ,expect: abutE               , pass: 0
+sorti                     -> swERti             ,expect: sORti               , pass: 0
+gagé                      -> ZaZe               ,expect: gaZe                , pass: 0
+grègues                   -> gRimER             ,expect: gREg                , pass: 0
+déroulaient               -> diROg°masj§        ,expect: deRulE              , pass: 0
+déchargeât                -> desaRZ°m@          ,expect: deSaRZa             , pass: 0
+prît                      -> siRbo              ,expect: pRi                 , pass: 0
+dégringolai               -> degRid°RE          ,expect: degR5golE           , pass: 0
+shanghaien                -> S@s°mE             ,expect: S@gaj5              , pass: 0
+apprécieront              -> apResjotRis        ,expect: apResiR§            , pass: 0
+babi                      -> bazi               ,expect: babi                , pass: 0
+douce-amère               -> dikotaliz9R        ,expect: dusamER             , pass: 0
+non-assistance            -> nEnsj§t            ,expect: nOnasist@s          , pass: 0
+coula                     -> kuban              ,expect: kula                , pass: 0
+entendissent              -> @tisj§             ,expect: @t@dis              , pass: 0
+diluerait                 -> diligRasj§         ,expect: dilyRE              , pass: 0
+antibois                  -> anitonaZ           ,expect: @tibwa              , pass: 0
+fâchée                    -> eapyRa             ,expect: faSe                , pass: 0
+aventurent                -> av@tyRe            ,expect: av@tyR              , pass: 0
+adoreriez                 -> @dORt°Rje          ,expect: adOR°Rje            , pass: 0
+positionne                -> potisjonER         ,expect: pozisjOn            , pass: 0
+tricherie                 -> tRit°Rje           ,expect: tRiS°Ri             , pass: 0
+encrer                    -> @sORd              ,expect: @kRe                , pass: 0
+cimente                   -> sim°t§             ,expect: sim@t               , pass: 0
+envelopper                -> @v§sjaR            ,expect: @v°lope             , pass: 0
+rejetant                  -> R°nEt              ,expect: R°Zt@               , pass: 0
+ocytocine                 -> Otiswakasj§        ,expect: OsitOsin            , pass: 0
+écumai                    -> emyti              ,expect: ekymE               , pass: 0
+dessineront               -> dis@tiR°ma         ,expect: desin°R§            , pass: 0
+lavent                    -> lav@s              ,expect: lav                 , pass: 0
+meulière                  -> mnijat9R           ,expect: m2ljER              , pass: 0
+analyseur                 -> al@tiR             ,expect: analiz9R            , pass: 0
+triplement                -> tRipojEl           ,expect: tRipl°m@            , pass: 0
+volée                     -> voleRe             ,expect: vole                , pass: 0
+lancinant                 -> l@sin@s            ,expect: l@sin@              , pass: 0
+octidi                    -> Ostidiz@           ,expect: Oktidi              , pass: 0
+british                   -> bRit°niR           ,expect: bRitiS              , pass: 0
+inexistant                -> inEkst5so          ,expect: inEgzist@           , pass: 0
+avenants                  -> av@se              ,expect: av°n@               , pass: 0
+scripteurs                -> s°REttiRi          ,expect: skRipt9R            , pass: 0
+piètres                   -> sifREt             ,expect: pjEtR               , pass: 0
+subtilisés                -> sybbis°m@          ,expect: syptilize           , pass: 0
+encrés                    -> @seRyd             ,expect: @kRe                , pass: 0
+bibliographiques          -> bjabifiRasje       ,expect: biblijogRafik       , pass: 0
+géométrie                 -> ZegotRifOk         ,expect: ZeometRi            , pass: 0
+pentamètre                -> s@pbinE            ,expect: p5tamEtR            , pass: 0
+direct                    -> diREsti            ,expect: diREkt              , pass: 0
+ressassés                 -> REsemo             ,expect: R°sase              , pass: 0
+conarde                   -> k§ZOR°Ra           ,expect: konaRd              , pass: 0
+dribler                   -> ileRje             ,expect: dRible              , pass: 0
+exclus                    -> Ekskly             ,expect: Ekskly              , pass: 0
+pataugeons                -> patoZ2z            ,expect: patoZ§              , pass: 0
+optalidon                 -> Oltomital          ,expect: Optalid§            , pass: 0
+embêtais                  -> @tib°ma            ,expect: @bEtE               , pass: 0
+rengorgeait               -> R°nOgR°m@          ,expect: R@gORZE             , pass: 0
+retint                    -> R°tin              ,expect: R°t5                , pass: 0
+talonnée                  -> talonjal           ,expect: talone              , pass: 0
+aiguillonnante            -> gl8isjonal         ,expect: Eg8ijon@t           , pass: 0
+macérations               -> matRigakt9R        ,expect: maseRasj§           , pass: 0
+surviendra                -> syRERdik           ,expect: syRvj5dRa           , pass: 0
+réessayant                -> Rez@tE             ,expect: Reesej@             , pass: 0
+palpera                   -> palvaRje           ,expect: palp°Ra             , pass: 0
+feindrait                 -> fn@tRil            ,expect: f5dRE               , pass: 0
+délinquante               -> dekylinE           ,expect: del5k@t             , pass: 0
+solive                    -> siNolEz            ,expect: soliv               , pass: 0
+miennes                   -> min§               ,expect: mjEn                , pass: 0
+impérialisation           -> 5dipRe@tibl        ,expect: 5peRjalizasj§       , pass: 0
+sciera                    -> s°mERtif           ,expect: sijRa               , pass: 0
+journalistique            -> ZuRnalistik        ,expect: ZuRnalistik         , pass: 0
+élites                    -> elitE              ,expect: elit                , pass: 0
+poupards                  -> OpsideRaf          ,expect: pupaR               , pass: 0
+souciât                   -> swatiza            ,expect: susja               , pass: 0
+contre-propositions       -> k§tRokERonatR      ,expect: k§tR°pRopozisj§     , pass: 0
+méridional                -> meiRomizasj§       ,expect: meRidjonal          , pass: 0
+nigelle                   -> l5site             ,expect: niZEl               , pass: 0
+ignora                    -> ZikoRje            ,expect: iNoRa               , pass: 0
+indigestionner            -> id@tifikaZ         ,expect: 5diZEstjOne         , pass: 0
+texane                    -> tEn2t              ,expect: tEksan              , pass: 0
+écorcher                  -> meRokyRE           ,expect: ekORSe              , pass: 0
+marchandages              -> maSRoSaZ           ,expect: maRS@daZ            , pass: 0
+ondulée                   -> 5klyR§             ,expect: §dyle               , pass: 0
+misent                    -> misit              ,expect: miz                 , pass: 0
+lézardés                  -> deblabRe           ,expect: lezaRde             , pass: 0
+taquins                   -> takin2z            ,expect: tak5                , pass: 0
+symbolise                 -> sifl°m@tR          ,expect: s5boliz             , pass: 0
+séronégatifs              -> seReganjatR        ,expect: seRonegatif         , pass: 0
+chef-d'oeuvre             -> Sf5bR°no           ,expect: SEd9vR              , pass: 0
+activistes                -> aksidit@           ,expect: aktivist            , pass: 0
+conception                -> k§sEkt9R           ,expect: k§sEpsj§            , pass: 0
+existantes                -> EkstjEntR          ,expect: Egzist@t            , pass: 0
+haut-de-forme             -> otokyRasjona       ,expect: od°fORm             , pass: 0
+rescapée                  -> REspekat           ,expect: REskape             , pass: 0
+gruger                    -> gyReRe             ,expect: gRyZe               , pass: 0
+désignerait               -> dez5sER°RE         ,expect: deziN°RE            , pass: 0
+résignais                 -> ReziN°Ra           ,expect: ReziNE              , pass: 0
+audimat                   -> imativ             ,expect: odimat              , pass: 0
+sniffant                  -> sinEbl°m@          ,expect: snif@               , pass: 0
+agresseurs                -> agREs°R§           ,expect: agRes9R             , pass: 0
+perrons                   -> pERt9R             ,expect: pER§                , pass: 0
+ressorties                -> R°sORtize          ,expect: R°sORti             , pass: 0
+revendaient               -> R°v@dER            ,expect: R°v@dE              , pass: 0
+stabilisateur             -> stabizaZj§z        ,expect: stabilizat9R        , pass: 0
+imaginant                 -> imaZinasj§         ,expect: imaZin@             , pass: 0
+suinter                   -> syt8iR             ,expect: s85te               , pass: 0
+consumation               -> kuz@sjone          ,expect: k§symasj§           , pass: 0
+construisit               -> k§tRikyte          ,expect: k§stR8izi           , pass: 0
+éléments-clés             -> defe@t8El          ,expect: elem@kle            , pass: 0
+esquives                  -> Eszije             ,expect: Eskiv               , pass: 0
+bariolures                -> babiRjER           ,expect: baRjolyR            , pass: 0
+attachera                 -> at@dRaz            ,expect: ataS°Ra             , pass: 0
+dissimulée                -> disizip°la         ,expect: disimyle            , pass: 0
+enclave                   -> @slEv              ,expect: @klav               , pass: 0
+opération-miracle         -> ooRasidatR§        ,expect: opeRasj§miRakl      , pass: 0
+conquérons                -> k§sORm°R§          ,expect: k§keR§              , pass: 0
+porte-couteau             -> pORttR2zo          ,expect: pORtkuto            , pass: 0
+décalottée                -> dekatyR§           ,expect: dekalote            , pass: 0
+péteras                   -> seRat9R            ,expect: pet°Ra              , pass: 0
+corset                    -> kOstRe             ,expect: kORsE               , pass: 0
+briment                   -> bRij§              ,expect: bRim                , pass: 0
+heurs                     -> 9R                 ,expect: 9R                  , pass: 0
+ridelle                   -> Rid°R§             ,expect: RidEl               , pass: 0
+laïcs                     -> lasy               ,expect: laik                , pass: 0
+botticellienne            -> botisjone          ,expect: botisEljEn          , pass: 0
+pariais                   -> paRijE             ,expect: paRjE               , pass: 0
+cendrées                  -> s@dR°R§            ,expect: s@dRe               , pass: 0
+entomologistes            -> n@tikonER          ,expect: @tomoloZist         , pass: 0
+désarroi                  -> dekaRdRa           ,expect: dezaRwa             , pass: 0
+remballé                  -> R@bale             ,expect: R@bale              , pass: 0
+paroxysmique              -> apRosimona         ,expect: paROksismik         , pass: 0
+convergeraient            -> k§vERt°loR         ,expect: k§vERZ°RE           , pass: 0
+cradingue                 -> kRediz@            ,expect: kRad5g              , pass: 0
+conclurais                -> k§soRibal          ,expect: k§klyRE             , pass: 0
+sonore                    -> s§Z°R§             ,expect: sonOR               , pass: 0
+bouffissures              -> buf°niR            ,expect: bufisyR             , pass: 0
+gaufrées                  -> gon°R9e            ,expect: gofRe               , pass: 0
+amorcé                    -> @koRabl            ,expect: amORse              , pass: 0
+danseraient               -> denastROm          ,expect: d@s°RE              , pass: 0
+veillerait                -> vElitaREz          ,expect: vEj°RE              , pass: 0
+broderai                  -> bORd°RE            ,expect: bROd°RE             , pass: 0
+tintait                   -> tiN°tE             ,expect: t5tE                , pass: 0
+tourmenteront             -> tuRSSwat9R         ,expect: tuRm@t°R§           , pass: 0
+ramures                   -> R°maR              ,expect: RamyR               , pass: 0
+galoché                   -> g@duR              ,expect: galoSe              , pass: 0
+hérissa                   -> ERme               ,expect: eRisa               , pass: 0
+protide                   -> pRotikte           ,expect: pRotid              , pass: 0
+supposes                  -> supsja             ,expect: sypoz               , pass: 0
+missive                   -> minisE             ,expect: misiv               , pass: 0
+bocks                     -> b§skole            ,expect: bOk                 , pass: 0
+lituaniens                -> listonik           ,expect: lit8anj5            , pass: 0
+mutilais                  -> mytilize           ,expect: mytilE              , pass: 0
+correspondait             -> OOstRofjER         ,expect: koREsp§dE           , pass: 0
+admiratifs                -> adisjeRan          ,expect: admiRatif           , pass: 0
+chiasme                   -> Simasi             ,expect: kjasm               , pass: 0
+rattrapes                 -> RatREp             ,expect: RatRap              , pass: 0
+marottes                  -> matRistyl          ,expect: maROt               , pass: 0
+violette                  -> vwajat9R           ,expect: vjolEt              , pass: 0
+assommerai                -> asimetRi           ,expect: asOm°RE             , pass: 0
+ajusteur                  -> gosj§              ,expect: aZyst9R             , pass: 0
+ordres                    -> odRoRe             ,expect: ORdR                , pass: 0
+mécaniques                -> mekasjOne          ,expect: mekanik             , pass: 0
+blédard                   -> lebaRdi            ,expect: bledaR              , pass: 0
+fissures                  -> f2t°Rje            ,expect: fisyR               , pass: 0
+protonotaire              -> pRotokonER         ,expect: pRotonotER          , pass: 0
+retraitée                 -> R°tR°RE            ,expect: R°tRete             , pass: 0
+touillait                 -> twalizE            ,expect: tujE                , pass: 0
+dépendu                   -> depin°R§           ,expect: dep@dy              , pass: 0
+inversant                 -> 5vERtine           ,expect: 5vERs@              , pass: 0
+verseras                  -> vEs°Re             ,expect: vERs°Ra             , pass: 0
+misons                    -> mis§               ,expect: miz§                , pass: 0
+lieue                     -> likte              ,expect: lj2                 , pass: 0
+attente                   -> at@ty              ,expect: at@t                , pass: 0
+embauche                  -> @bule              ,expect: @boS                , pass: 0
+raban                     -> Raban              ,expect: Rab@                , pass: 0
+fossettes                 -> fEston9R           ,expect: fosEt               , pass: 0
+tutoyant                  -> tyltwast§          ,expect: tytwaj@             , pass: 0
+plâtreuses                -> platR2z            ,expect: platR2z             , pass: 0
+houspille                 -> fwitaZ             ,expect: uspij               , pass: 0
+repliera                  -> R°plijER           ,expect: R°pliRa             , pass: 0
+mea culpa                 -> mag8ite            ,expect: meakylpa            , pass: 0
+rétinien                  -> Retin°m@           ,expect: Retinj5             , pass: 0
+beurrée                   -> b9RseRe            ,expect: b9Re                , pass: 0
+patafiole                 -> patofilE           ,expect: patafjOl            , pass: 0
+repentante                -> R°s@pl             ,expect: R°p@t@t             , pass: 0
+décorées                  -> dek§tRefe          ,expect: dekoRe              , pass: 0
+partitions                -> paRtityRE          ,expect: paRtisj§            , pass: 0
+sarrasines                -> saRRija            ,expect: saRazin             , pass: 0
+avoua                     -> amoligRe           ,expect: avwa                , pass: 0
+végétarisme               -> vegaRedjen@        ,expect: veZetaRizm          , pass: 0
+représenteront            -> R°pERse            ,expect: R°pRez@t°R§         , pass: 0
+fendais                   -> fnamile            ,expect: f@dE                , pass: 0
+fragilisés                -> fREg°RE            ,expect: fRaZilize           , pass: 0
+laborieuses               -> labuRij§           ,expect: laboRj2z            , pass: 0
+vaudoues                  -> vuv°te             ,expect: vodu                , pass: 0
+forints                   -> fw@tR              ,expect: foRint              , pass: 0
+recroquevillées           -> R°kRomERsj§        ,expect: R°kROkvije          , pass: 0
+sanguinolent              -> s@glosj§           ,expect: s@ginol@            , pass: 0
+agirons                   -> gadiR§             ,expect: aZiR§               , pass: 0
+soulever                  -> sufER              ,expect: sul°ve              , pass: 0
+fécaux                    -> fERm               ,expect: feko                , pass: 0
+mariant                   -> maRit@t            ,expect: maRj@               , pass: 0
+cajuns                    -> k@                 ,expect: kaZ1                , pass: 0
+découvrais                -> dikORt°Ri          ,expect: dekuvRE             , pass: 0
+disputons                 -> diskytER           ,expect: dispyt§             , pass: 0
+propulsion                -> pRofykt9R          ,expect: pRopylsj§           , pass: 0
+excédant                  -> Ekst°mER           ,expect: Eksed@              , pass: 0
+psychothérapeute          -> ps2ztuRazwa        ,expect: psikoteRap2t        , pass: 0
+logistique                -> lokitik8e          ,expect: loZistik            , pass: 0
+crocodile                 -> kuRopydk§          ,expect: kRokodil            , pass: 0
+chasserons                -> SasikR             ,expect: Sas°R§              , pass: 0
+offriront                 -> OfROm°RE           ,expect: ofRiR§              , pass: 0
+désunissaient             -> dyzylEstREn        ,expect: dezynisE            , pass: 0
+adjointes                 -> adZonite           ,expect: adZw5t              , pass: 0
+mysticismes               -> 5sitik@            ,expect: mistisizm           , pass: 0
+chanceler                 -> S@SuR              ,expect: S@s°le              , pass: 0
+interdits                 -> 5tERisE            ,expect: 5tERdi              , pass: 0
+déboîtait                 -> debuttRE           ,expect: debwatE             , pass: 0
+îlots                     -> jutE               ,expect: ilo                 , pass: 0
+inhalé                    -> 5blate             ,expect: inale               , pass: 0
+retombante                -> R°t§bR             ,expect: R°t§b@t             , pass: 0
+opticienne                -> Ostidik°m@         ,expect: OptisjEn            , pass: 0
+instit                    -> ynitik             ,expect: 5stit               , pass: 0
+pardonner                 -> p@dRonak           ,expect: paRdone             , pass: 0
+litières                  -> listoRE            ,expect: litjER              , pass: 0
+usine                     -> yzi                ,expect: yzin                , pass: 0
+téléspectatrice           -> stezefokotik       ,expect: telespEktatRis      , pass: 0
+glycérol                  -> ligotRafje         ,expect: gliseROl            , pass: 0
+citoyenneté               -> 5tijOn°m@          ,expect: sitwajEn°te         , pass: 0
+exécutait                 -> Egzekt°RE          ,expect: EgzekytE            , pass: 0
+désordonné                -> diskOR°R§          ,expect: dezORdone           , pass: 0
+féliciterais              -> felisjOn           ,expect: felisit°RE          , pass: 0
+rentrés                   -> R°nER              ,expect: R@tRe               , pass: 0
+détraquée                 -> deteRobl           ,expect: detRake             , pass: 0
+enlevées                  -> @l°m9R             ,expect: @l°ve               , pass: 0
+hellénistes               -> lEn                ,expect: Elenist             , pass: 0
+besognant                 -> bEl°t@             ,expect: b2zoN@              , pass: 0
+enrubannait               -> @Rylast            ,expect: @RybanE             , pass: 0
+mémorisaient              -> meomiROlik         ,expect: memoRizE            , pass: 0
+emblavure                 -> @blomeRa           ,expect: @blavyR             , pass: 0
+coyote                    -> Owtimote           ,expect: kojOt               , pass: 0
+électrophorèse            -> eekostRok9R        ,expect: elEktROfOREz        , pass: 0
+tenue                     -> tEn                ,expect: t°ny                , pass: 0
+éclectique                -> dezEktjOn          ,expect: eklEktik            , pass: 0
+méconnaissais             -> mekonOstike        ,expect: mekonEsE            , pass: 0
+ingénieuse                -> inemisj§           ,expect: 5Zenj2z             , pass: 0
+bénédiction               -> etyfikaRE          ,expect: benediksj§          , pass: 0
+ciguë                     -> 5ziR               ,expect: sigy                , pass: 0
+transhumantes             -> tR@sktyR           ,expect: tR@zym@t            , pass: 0
+loufoques                 -> lukoliRe           ,expect: lufOk               , pass: 0
+édifierait                -> edifjet°RE         ,expect: edifiRE             , pass: 0
+identifiables             -> id@tifikabl        ,expect: id@tifjabl          , pass: 0
+distilleront              -> distokyRE          ,expect: distil°R§           , pass: 0
+tangente                  -> t@g@               ,expect: t@Z@t               , pass: 0
+signifierait              -> sj5fiRkatabl       ,expect: siNifiRE            , pass: 0
+compartimente             -> k§potRaj@          ,expect: k§paRtim@t          , pass: 0
+sortais                   -> sotRif             ,expect: sORtE               , pass: 0
+marguerite                -> @dRogik            ,expect: maRg°Rit            , pass: 0
+producteurs               -> puRdyz@tR          ,expect: pRodykt9R           , pass: 0
+deuxième                  -> 5dygt5bl           ,expect: d2zjEm              , pass: 0
+traîneraient              -> tR@gRij@           ,expect: tREn°RE             , pass: 0
+pécore                    -> s°pRoZe            ,expect: pekOR               , pass: 0
+déviances                 -> devikaZ@s          ,expect: devj@s              , pass: 0
+foncée                    -> Osklev5            ,expect: f§se                , pass: 0
+active                    -> akityRe            ,expect: aktiv               , pass: 0
+nuance                    -> nylEst             ,expect: n8@s                , pass: 0
+obstinations              -> botisjonE          ,expect: Opstinasj§          , pass: 0
+encapuchonnés             -> @k§svR°m@          ,expect: @kapySone           , pass: 0
+ténèbre                   -> tenegRi            ,expect: tenEbR              , pass: 0
+brancardiers              -> bRas°RilER         ,expect: bR@kaRdje           , pass: 0
+venette                   -> @s°d@              ,expect: v°nEt               , pass: 0
+conjugalité               -> kl5gztRas          ,expect: k§Zygalite          , pass: 0
+hydatique                 -> itomitas           ,expect: idatik              , pass: 0
+jaillît                   -> ZElitE             ,expect: Zaji                , pass: 0
+démasquaient              -> deSakaZj§          ,expect: demaskE             , pass: 0
+engueulaient              -> @gl8i              ,expect: @g2lE               , pass: 0
+vendu                     -> v@tyle             ,expect: v@dy                , pass: 0
+impact                    -> izakive            ,expect: 5pakt               , pass: 0
+allongerait               -> lakoniR°m@         ,expect: al§Z°RE             , pass: 0
+bravez                    -> bERda              ,expect: bRave               , pass: 0
+émoustillante             -> emustij@           ,expect: emustij@t           , pass: 0
+détrompée                 -> detOR°RE           ,expect: detR§pe             , pass: 0
+contenant                 -> k§Z§tt             ,expect: k§t°n@              , pass: 0
+fiers-à-bras              -> fisaRdRak          ,expect: fjERabRa            , pass: 0
+tendrons                  -> t§n°Rje            ,expect: t@dR§               , pass: 0
+autocensurer              -> otokst°Ra          ,expect: otos@syRe           , pass: 0
+disposeras                -> dispoR°RE          ,expect: dispoz°Ra           , pass: 0
+provoquerons              -> ORokORm°R§         ,expect: pRovOk°R§           , pass: 0
+épuiseront                -> epyzj§             ,expect: ep8iz°R§            , pass: 0
+auner                     -> @dR                ,expect: one                 , pass: 0
+scandaleusement           -> sp@dytER           ,expect: sk@dal2z°m@         , pass: 0
+déterminons               -> dez§tR°m@          ,expect: detERmin§           , pass: 0
+doc                       -> k§dy               ,expect: dOk                 , pass: 0
+bombas                    -> b§bane             ,expect: b§ba                , pass: 0
+exécrait                  -> EksteRjE           ,expect: EgzekRE             , pass: 0
+endossai                  -> nasjone            ,expect: @dosE               , pass: 0
+castille                  -> kastikyl           ,expect: kastij              , pass: 0
+regrettablement           -> R°tRb°ne           ,expect: R°gREtabl°m@        , pass: 0
+permanenter               -> S°vR@t°m@          ,expect: pERman@te           , pass: 0
+finissait                 -> finis@s            ,expect: finisE              , pass: 0
+inculquât                 -> 5kylasj§           ,expect: 5kylka              , pass: 0
+plaisaient                -> plEzER             ,expect: plEzE               , pass: 0
+suspectes                 -> syskystR           ,expect: syspEkt             , pass: 0
+lord                      -> lodRi              ,expect: lORd                , pass: 0
+blanchisseur              -> blaSist            ,expect: bl@Sis9R            , pass: 0
+attendîmes                -> anjEt°mi           ,expect: at@dim              , pass: 0
+inscription               -> 5siRtRokje         ,expect: 5skRipsj§           , pass: 0
+actionnée                 -> aksjone            ,expect: aksjone             , pass: 0
+extériorisait             -> EkstERmiRatRis     ,expect: EksteRjoRizE        , pass: 0
+fonction                  -> f§ksjon9R          ,expect: f§ksj§              , pass: 0
+périodicité               -> pRisiROk°R§        ,expect: peRjodisite         , pass: 0
+parsemés                  -> apseRje            ,expect: paRs°me             , pass: 0
+basin                     -> bEz@               ,expect: baz5                , pass: 0
+dôngs                     -> don2               ,expect: d§g                 , pass: 0
+dégradait                 -> degRad°RE          ,expect: degRadE             , pass: 0
+trias                     -> tRifE              ,expect: tRijas              , pass: 0
+encourent                 -> @kuRmj             ,expect: @kuR                , pass: 0
+croulant                  -> kRulat9R           ,expect: kRul@               , pass: 0
+intrigantes               -> itinyRE            ,expect: 5tRig@t             , pass: 0
+fini                      -> finin              ,expect: fini                , pass: 0
+répondriez                -> Rek§diR§           ,expect: Rep§dRije           , pass: 0
+brilleront                -> bRijonER           ,expect: bRij°R§             , pass: 0
+précis                    -> pREs°Ri            ,expect: pResi               , pass: 0
+passive                   -> pasiv              ,expect: pasiv               , pass: 0
+tinta                     -> tig°nam            ,expect: t5ta                , pass: 0
+dévisagèrent              -> devitablim@        ,expect: devizaZER           , pass: 0
+agressivement             -> agR@s°mi           ,expect: agResiv°m@          , pass: 0
+placé                     -> plesad             ,expect: plase               , pass: 0
+jeunette                  -> ZEnt               ,expect: Z9nEt               , pass: 0
+dérouillez                -> diROg°RE           ,expect: deRuje              , pass: 0
+intraoculaire             -> 5tERpilatRif       ,expect: 5tRaOkylER          , pass: 0
+poplité                   -> pwazoRe            ,expect: pOplite             , pass: 0
+finirons                  -> finoRis            ,expect: finiR§              , pass: 0
+goinfrez                  -> g§diRyse           ,expect: gw5fRe              , pass: 0
+maçons                    -> maskl5             ,expect: mas§                , pass: 0
+méthylène                 -> metitamik          ,expect: metilEn             , pass: 0
+nord-coréen               -> §koRogRasj         ,expect: nORkoRe5            , pass: 0
+embrassâmes               -> @bRas°Ra           ,expect: @bRasam             , pass: 0
+généreusement             -> ZeneRE             ,expect: ZeneR2z°m@          , pass: 0
+ongulé                    -> nulete             ,expect: §gyle               , pass: 0
+assistances               -> asist              ,expect: asist@s             , pass: 0
+entubes                   -> Ent                ,expect: @tyb                , pass: 0
+déracinée                 -> dekRaS°m@          ,expect: deRasine            , pass: 0
+contournement             -> k§tuRn°Ra          ,expect: k§tuRn°m@           , pass: 0
+fendant                   -> f@s§               ,expect: f@d@                , pass: 0
+confluer                  -> k§flyRe            ,expect: k§fl8e              , pass: 0
+reçoive                   -> REsiR§             ,expect: R°swav              , pass: 0
+mire                      -> miR§               ,expect: miR                 , pass: 0
+remake                    -> R°maR              ,expect: RimEk               , pass: 0
+rechargerons              -> R°sERv°l§          ,expect: R°SaRZ°R§           , pass: 0
+effrontée                 -> efORs°R§           ,expect: efR§te              , pass: 0
+méiose                    -> mejotiz            ,expect: mejoz               , pass: 0
+mi-fermiers               -> 5mERtigat9R        ,expect: mifERmje            , pass: 0
+confraternelle            -> k§stRafjER         ,expect: k§fRatERnEl         , pass: 0
+différenciation           -> idefR@sjOst        ,expect: difeR@sjasj§        , pass: 0
+prochains                 -> pORSoz@            ,expect: pRoS5               , pass: 0
+horripilations            -> ORpidER5           ,expect: oRipilasj§          , pass: 0
+dépucela                  -> depsedj@           ,expect: depys°la            , pass: 0
+jetés                     -> Zet8a              ,expect: Z°te                , pass: 0
+remanger                  -> R°maN°Re           ,expect: R2m@Ze              , pass: 0
+exhorté                   -> EkstuRbe           ,expect: EgzORte             , pass: 0
+égratignait               -> egRatilize         ,expect: egRatiNE            , pass: 0
+filage                    -> flEjaR             ,expect: filaZ               , pass: 0
+désorganisée              -> dezERdonaste       ,expect: dezORganize         , pass: 0
+attriquer                 -> atiRybje           ,expect: atRike              , pass: 0
+chouré                    -> suvR@              ,expect: SuRe                , pass: 0
+antonomase                -> nanosj§tan         ,expect: @tonomaz            , pass: 0
+révélés                   -> ipeRegal           ,expect: Revele              , pass: 0
+podologue                 -> kologozaR          ,expect: podolOg             , pass: 0
+blâme                     -> blEk               ,expect: blam                , pass: 0
+boutonnée                 -> bOkt°n9R           ,expect: butone              , pass: 0
+bricoleur                 -> bRikut9R           ,expect: bRikol9R            , pass: 0
+extraconjugal             -> EktRasj§tR         ,expect: EkstRak§Zygal       , pass: 0
+rythmées                  -> yRimEt9R           ,expect: Ritme               , pass: 0
+arrière-cours             -> aRjOR°tiRisje      ,expect: aRjERkuR            , pass: 0
+découdre                  -> diskOR°R§          ,expect: dekudR              , pass: 0
+publicistes               -> fylkt8ik           ,expect: pyblisist           , pass: 0
+roseaux                   -> Roko               ,expect: Rozo                , pass: 0
+jachère                   -> Z@daR              ,expect: ZaSER               , pass: 0
+surinent                  -> syREn              ,expect: syRin               , pass: 0
+harcelantes               -> aS°REs°R@          ,expect: aRs°l@t             , pass: 0
+réchaufferai              -> ReSepabl           ,expect: ReSof°RE            , pass: 0
+regoûté                   -> R°ZuR              ,expect: R2gute              , pass: 0
+pisiforme                 -> fisootRif          ,expect: pizifORm            , pass: 0
+innocenté                 -> n5t8ikas            ,expect: inos@te             , pass: 0
+chrême                    -> S°RySe             ,expect: kREm                , pass: 0
+cookie                    -> Oksjod@            ,expect: kuki                , pass: 0
+brûleuse                  -> bRyl°Re            ,expect: bRyl2z              , pass: 0
+inclus                    -> 5kyl               ,expect: 5kly                , pass: 0
+anti-castriste            -> @tiksikalikt       ,expect: @tikastRist         , pass: 0
+tu                        -> ti                 ,expect: ty                  , pass: 0
+affligèrent               -> afil°RE            ,expect: afliZER             , pass: 0
+acquittez                 -> aksid°t@           ,expect: akite               , pass: 0
+trouvèrent                -> tuRiN°R§           ,expect: tRuvER              , pass: 0
+divorcé                   -> 5dORs°RE           ,expect: divORse             , pass: 0
+gaba                      -> Zabe               ,expect: gaba                , pass: 0
+motivé                    -> monityRe           ,expect: motive              , pass: 0
+abouti                    -> abidwa             ,expect: abuti               , pass: 0
+mutuellement              -> ytylis@            ,expect: myt8El°m@           , pass: 0
+comique                   -> komistRi           ,expect: komik               , pass: 0
+rigidement                -> Ridistiv           ,expect: RiZid°m@            , pass: 0
+brodeuse                  -> bRuk°Ra            ,expect: bRod2z              , pass: 0
+incrustais                -> 5syRablist         ,expect: 5kRystE             , pass: 0
+réparatrice               -> RapRematRi         ,expect: RepaRatRis          , pass: 0
+surgelé                   -> syRZER             ,expect: syRZ°le             , pass: 0
+pâmées                    -> pavR               ,expect: pame                , pass: 0
+re-frappe                 -> R°fRape            ,expect: R°fRap              , pass: 0
+mourûtes                  -> 5kORt°m@           ,expect: muRyt               , pass: 0
+hérissés                  -> ER9z               ,expect: eRise               , pass: 0
+réverbère                 -> RevERZ°RE          ,expect: RevERbER            , pass: 0
+recommenceraient          -> R°kom@s°R§         ,expect: R°kom@s°RE          , pass: 0
+titans                    -> tit§               ,expect: tit@                , pass: 0
+trisse                    -> tRis°me            ,expect: tRis                , pass: 0
+enseignes                 -> @sjEn              ,expect: @sEN                , pass: 0
+disséquerais              -> diskaRifje         ,expect: disek°RE            , pass: 0
+baratte                   -> batR°Ra            ,expect: baRat               , pass: 0
+officie                   -> ofisjEl            ,expect: ofisi               , pass: 0
+arrêtés                   -> atReve             ,expect: aRete               , pass: 0
+fendit                    -> fnEjE              ,expect: f@di                , pass: 0
+cédrats                   -> sedRasE            ,expect: sedRa               , pass: 0
+statufiés                 -> statyfje           ,expect: statyfje            , pass: 0
+vendraient                -> v@tRiloze          ,expect: v@dRE               , pass: 0
+piverts                   -> pivERtif           ,expect: pivER               , pass: 0
+stridents                 -> stRiktasj§         ,expect: stRid@              , pass: 0
+bucoliques                -> bustjonER          ,expect: bykolik             , pass: 0
+casque                    -> akside             ,expect: kask                , pass: 0
+éructées                  -> eRyt°me            ,expect: eRykte              , pass: 0
+remboursaient             -> R°buRs°m@          ,expect: R@buRsE             , pass: 0
+guerroyant                -> gyRaN°R§           ,expect: gERwaj@             , pass: 0
+drapiers                  -> dRap°Ri            ,expect: dRapje              , pass: 0
+arrivée                   -> oneR°RE            ,expect: aRive               , pass: 0
+oeillette                 -> Olmit°Ri           ,expect: 9jEt                , pass: 0
+cachectique               -> aSsitanje          ,expect: kaSEktik            , pass: 0
+déroge                    -> degOR°Ra           ,expect: deROZ               , pass: 0
+max                       -> maky               ,expect: maks                , pass: 0
+armure                    -> aRyve              ,expect: aRmyR               , pass: 0
+cossards                  -> kusadRani          ,expect: kosaR               , pass: 0
+diphtongue                -> diskaliz§          ,expect: dift§g              , pass: 0
+mi-grossières             -> imistRifOk         ,expect: migRosjER           , pass: 0
+dionysiaques              -> distoliz°m@        ,expect: djonizjak           , pass: 0
+entamais                  -> @tin@t             ,expect: @tamE               , pass: 0
+rajustait                 -> R°tamy             ,expect: RaZystE             , pass: 0
+coloriez                  -> kologoRi           ,expect: koloRje             , pass: 0
+préopératoire             -> pRezORmoRaZ        ,expect: pReopeRatwaR        , pass: 0
+pointerait                -> pwatitRoR          ,expect: pw5t°RE             , pass: 0
+vieux-rose                -> 5vEksjone          ,expect: vj2Roz              , pass: 0
+remportai                 -> R°kOR°m@           ,expect: R@pORtE             , pass: 0
+arborescence              -> abROk°R§           ,expect: aRboREs@s           , pass: 0
+mesurons                  -> n2sERkyl           ,expect: m°zyR§              , pass: 0
+salutation                -> saltisjonE         ,expect: salytasj§           , pass: 0
+écrasèrent                -> ekRak°RE           ,expect: ekRazER             , pass: 0
+rebasculera               -> R°basku            ,expect: R°baskyl°Ra         , pass: 0
+rampant                   -> aRSSe              ,expect: R@p@                , pass: 0
+pavez                     -> pavR2              ,expect: pave                , pass: 0
+sauces                    -> soSE               ,expect: sos                 , pass: 0
+débrouillez               -> debRuj°Ra          ,expect: debRuje             , pass: 0
+précisé                   -> pReside            ,expect: pResize             , pass: 0
+rentières                 -> R°nEtRi            ,expect: R@tjER              , pass: 0
+intercédait               -> 5tERsipeRatl       ,expect: 5tERsedE            , pass: 0
+grisai                    -> gRisE              ,expect: gRizE               , pass: 0
+bouillirons               -> bujonifje          ,expect: bujiR§              , pass: 0
+fanfreluches              -> f@bR°m@            ,expect: f@fR°lyS            , pass: 0
+syndiqué                  -> siNig°z§           ,expect: s5dike              , pass: 0
+empaqueté                 -> @p°t°vE            ,expect: @pak°te             , pass: 0
+bytes                     -> bEjt               ,expect: bit                 , pass: 0
+colporteur                -> O§toRoZyR          ,expect: kOlpORt9R           , pass: 0
+conjuguait                -> kyl5tyR            ,expect: k§ZygE              , pass: 0
+shootera                  -> s§taRje            ,expect: Sut°Ra              , pass: 0
+sommait                   -> sumatE             ,expect: somE                , pass: 0
+crayons                   -> kRonoz             ,expect: kREj§               , pass: 0
+bled                      -> lebit              ,expect: blEd                , pass: 0
+voiture-bar               -> vwajeR°R§          ,expect: vwatyRbaR           , pass: 0
+érythème                  -> etiRmali           ,expect: eRitEm              , pass: 0
+troussaient               -> tRust°Ra           ,expect: tRusE               , pass: 0
+rebroussée                -> R°bRuse            ,expect: R°bRuse             , pass: 0
+anneau                    -> an§se              ,expect: ano                 , pass: 0
+crucifiez                 -> syRvizik§          ,expect: kRysifje            , pass: 0
+mormon                    -> monoRe             ,expect: mORm§               , pass: 0
+compositeurs              -> OkspadoRite        ,expect: k§pozit9R           , pass: 0
+simulera                  -> simEgR             ,expect: simyl°Ra            , pass: 0
+dure                      -> dyRE               ,expect: dyR                 , pass: 0
+suturée                   -> sybyREst           ,expect: sytyRe              , pass: 0
+courbe                    -> suR°R§             ,expect: kuRb                , pass: 0
+gustatif                  -> gEstyt°m@          ,expect: gystatif            , pass: 0
+cascatelles               -> kastabl            ,expect: kaskatEl            , pass: 0
+ascensionnelles           -> as°s5              ,expect: as@sjonEl           , pass: 0
+pupitres                  -> supRit8e           ,expect: pypitR              , pass: 0
+encouragiez               -> @tufRijat          ,expect: @kuRaZje            , pass: 0
+assujetti                 -> asit°Ra            ,expect: asyZEti             , pass: 0
+évider                    -> dvER2ze            ,expect: evide               , pass: 0
+remboursable              -> R°buRs°m@          ,expect: R@buRsabl           , pass: 0
+suspendu                  -> syskyR             ,expect: sysp@dy             , pass: 0
+ébranlât                  -> ebRal°m@           ,expect: ebR@la              , pass: 0
+cordouan                  -> kuRomyRa           ,expect: kORdu@              , pass: 0
+autodafés                 -> otodefOR           ,expect: otodafe             , pass: 0
+bistrote                  -> bEstjoRE           ,expect: bistROt             , pass: 0
+hébreu                    -> gR°ve              ,expect: ebR2                , pass: 0
+refroidirait              -> R°pEgRij§          ,expect: R°fRwadiRE          , pass: 0
+complétude                -> k§sodeblit         ,expect: k§pletyd            , pass: 0
+naviguait                 -> navjotiR           ,expect: navigE              , pass: 0
+tuas                      -> tut                ,expect: t8a                 , pass: 0
+trieur                    -> t9RnyRv            ,expect: tRij9R              , pass: 0
+perchées                  -> EpsRe°m@           ,expect: pERSe               , pass: 0
+pisseuses                 -> f2sjER             ,expect: pis2z               , pass: 0
+l'une                     -> lOS                ,expect: lyn                 , pass: 0
+moscovites                -> m§spotyltibl       ,expect: mOskovit            , pass: 0
+interromprais             -> 5tERsipaRat9R      ,expect: 5tER§pRE            , pass: 0
+constipés                 -> k§stikyl           ,expect: k§stipe             , pass: 0
+prédictions               -> pResiptRis         ,expect: pRediksj§           , pass: 0
+odes                      -> §do                ,expect: Od                  , pass: 0
+lardant                   -> laRt°ni            ,expect: laRd@               , pass: 0
+poussah                   -> sufl               ,expect: pusa                , pass: 0
+décuplent                 -> dekypaR            ,expect: dekypl              , pass: 0
+autosuggestion            -> otysjonER          ,expect: otosygZEstj§        , pass: 0
+admirent                  -> madjoni            ,expect: admiR               , pass: 0
+évalueront                -> evakuRv            ,expect: evalyR§             , pass: 0
+négril                    -> negiR§             ,expect: negRil              , pass: 0
+mutile                    -> ysil@t             ,expect: mytil               , pass: 0
+updater                   -> sydRiv@            ,expect: 9pdate              , pass: 0
+seguedilla                -> sENstopaZ          ,expect: s°g°dija            , pass: 0
+phonétique                -> pEstoniRi          ,expect: fonetik             , pass: 0
+éméchés                   -> mezyR°l@           ,expect: emeSe               , pass: 0
+vélocement                -> v°lOk°RE           ,expect: velOs°m@            , pass: 0
+café-hôtel                -> SafRebom           ,expect: kafeotEl            , pass: 0
+retsina                   -> REstite            ,expect: R°sina              , pass: 0
+chaud-froid               -> SozemyRj§          ,expect: SofRwa              , pass: 0
+agrémentaient             -> agRem@tR           ,expect: agRem@tE            , pass: 0
+maniés                    -> m°nasil            ,expect: manje               , pass: 0
+dévisagée                 -> devizaZ°RE         ,expect: devizaZe            , pass: 0
+tire-bouchonné            -> tyRbiNOR           ,expect: tiRbuSone           , pass: 0
+appartenaient             -> apaRt°mE           ,expect: apaRt°nE            , pass: 0
+lâcheriez                 -> lasoRj@t           ,expect: laS°Rje             , pass: 0
+optique                   -> Oktipwat           ,expect: Optik               , pass: 0
+barrésien                 -> baRik°Ra           ,expect: baRezj5             , pass: 0
+roidie                    -> iRonidi            ,expect: Rwadi               , pass: 0
+imaginèrent               -> inaZimat9R         ,expect: imaZinER            , pass: 0
+techniques                -> t@kj2z°m@          ,expect: tEknik              , pass: 0
+préparaient               -> pERseRoRE          ,expect: pRepaRE             , pass: 0
+concernèrent              -> k§stR°RE           ,expect: k§sERnER            , pass: 0
+incarcéré                 -> 5tERvozebl         ,expect: 5kaRseRe            , pass: 0
+fixes                     -> fist               ,expect: fiks                , pass: 0
+dégagés                   -> degabRe            ,expect: degaZe              , pass: 0
+affaibli                  -> afiblite           ,expect: afEbli              , pass: 0
+déliquescents             -> dekulinE           ,expect: delikes@            , pass: 0
+décerner                  -> demERt°R§          ,expect: desERne             , pass: 0
+décolletée                -> deklut°Ra          ,expect: dekOl°te            , pass: 0
+protohistoire             -> pRotikolER         ,expect: pRotoistwaR         , pass: 0
+baltique                  -> bltasj§            ,expect: baltik              , pass: 0
+katas                     -> katyz              ,expect: kata                , pass: 0
+échelons                  -> eS°l§              ,expect: eS°l§               , pass: 0
+oral                      -> ooRaZ              ,expect: oRal                , pass: 0
+bouriates                 -> but°RE             ,expect: buRjat              , pass: 0
+dysphorie                 -> disooRefje         ,expect: disfoRi             , pass: 0
+reléguai                  -> R°legyl            ,expect: R°legE              , pass: 0
+admirées                  -> madjoRize          ,expect: admiRe              , pass: 0
+abrasive                  -> abRis°Ra           ,expect: abRaziv             , pass: 0
+monocylindre              -> inokslonoRi        ,expect: monosil5dR          , pass: 0
+graphophone               -> bRoadR5            ,expect: gRafofOn            , pass: 0
+vélos                     -> vekole             ,expect: velo                , pass: 0
+générations               -> ZenetRasj§         ,expect: ZeneRasj§           , pass: 0
+cassons                   -> kas§d              ,expect: kas§                , pass: 0
+colonel                   -> kolonize           ,expect: kolonEl             , pass: 0
+vina                      -> vj@t§              ,expect: vina                , pass: 0
+ultrasonique              -> yltyRasj§          ,expect: yltRasonik          , pass: 0
+survola                   -> syRvonabl          ,expect: syRvola             , pass: 0
+ravissements              -> REv°s@             ,expect: Ravis°m@            , pass: 0
+anti-métaphysique         -> antiksfalit§       ,expect: @timetafizik        , pass: 0
+décerné                   -> deseRje            ,expect: desERne             , pass: 0
+congelons                 -> k§Z§sj§            ,expect: k§Z°l§              , pass: 0
+bleuissante               -> bl2zism@           ,expect: bl9is@t             , pass: 0
+capitalisés               -> kastifilaZ         ,expect: kapitalize          , pass: 0
+médecin-conseil           -> mmeikospOn°R§      ,expect: mEds5k§sEj          , pass: 0
+bassines                  -> bazin              ,expect: basin               , pass: 0
+confectionnés             -> k§fEskonaZ         ,expect: k§fEksjone          , pass: 0
+digèrent                  -> digERti            ,expect: diZER               , pass: 0
+eczémateux                -> metas2z            ,expect: Egzemat2            , pass: 0
+éboulis                   -> ebilwane           ,expect: ebuli               , pass: 0
+soulageons                -> sulwam             ,expect: sulaZ§              , pass: 0
+réveillions               -> RevEjolizm         ,expect: RevEj§              , pass: 0
+boudèrent                 -> bud°t°RE           ,expect: budER               , pass: 0
+profiterait               -> pRosiRtiR          ,expect: pRofit°RE           , pass: 0
+squameuse                 -> kosabl             ,expect: skwam2z             , pass: 0
+cuirasser                 -> s8iRm@til          ,expect: k8iRase             , pass: 0
+atteints                  -> atin@t             ,expect: at5                 , pass: 0
+archinulles               -> aRimone            ,expect: aRSinyl             , pass: 0
+impécunieuse              -> 5pERtizone         ,expect: 5pekynj2z           , pass: 0
+soupes                    -> skspyl             ,expect: sup                 , pass: 0
+suicidée                  -> s8it8iRa           ,expect: s8iside             , pass: 0
+virons                    -> vikRoNo            ,expect: viR§                , pass: 0
+mouvementé                -> muv°t§             ,expect: muv°m@te            , pass: 0
+mutin                     -> mytin              ,expect: myt5                , pass: 0
+maladive                  -> malmotRif          ,expect: maladiv             , pass: 0
+rosicrucien               -> RikuRtika          ,expect: RozikRysj5          , pass: 0
+arrimés                   -> aRiv°Re            ,expect: aRime               , pass: 0
+arrière-petites-filles    -> aRjERt°Rikl        ,expect: aRjERp°titfij       , pass: 0
+alentour                  -> al@tiR             ,expect: al@tuR              , pass: 0
+mordançage                -> mORman°Ri          ,expect: mORd@saZ            , pass: 0
+pâlissent                 -> palisE             ,expect: palis               , pass: 0
+universels                -> ynivyRatine        ,expect: ynivERsEl           , pass: 0
+casernes                  -> S@s°R§             ,expect: kazERn              , pass: 0
+taillis                   -> tajinE             ,expect: taji                , pass: 0
+éconduisirent             -> edik§stRas         ,expect: ek§d8iziR           , pass: 0
+mourrait                  -> 5tORk°Ra           ,expect: muRE                , pass: 0
+ailée                     -> alize              ,expect: ele                 , pass: 0
+engagés                   -> negas9R            ,expect: @gaZe               , pass: 0
+louvoyons                 -> lukwatik           ,expect: luvwaj§             , pass: 0
+complètement              -> k§solatibl         ,expect: k§plEt°m@           , pass: 0
+canzonettes               -> k@t°lOn            ,expect: k@zonEt             , pass: 0
+trimestrielles            -> tRiskyRE           ,expect: tRimEstRijEl        , pass: 0
+motif                     -> motifik            ,expect: motif               , pass: 0
+élisabéthain              -> eelit°RE           ,expect: elizabet5           , pass: 0
+divagation                -> dimabliz°R§        ,expect: divagasj§           , pass: 0
+re-classe                 -> R°pon@             ,expect: R°klas              , pass: 0
+culottes                  -> kyltEk             ,expect: kylOt               , pass: 0
+argentine                 -> aRnetj2n           ,expect: aRZ@tin             , pass: 0
+plongeon                  -> pl§ZOn             ,expect: pl§Z§               , pass: 0
+ressentit                 -> R°s@tE             ,expect: R°s@ti              , pass: 0
+minois                    -> 5noij§             ,expect: minwa               , pass: 0
+cassure                   -> sakyR§             ,expect: kasyR               , pass: 0
+éclipsai                  -> defiltjen          ,expect: eklipsE             , pass: 0
+profilèrent               -> pRofik°RE          ,expect: pRofilER            , pass: 0
+exerçai                   -> EksgRE             ,expect: EgzERsE             , pass: 0
+respirerez                -> ERspiR°RE          ,expect: REspiR°Re           , pass: 0
+archevêque                -> aSRivak            ,expect: aRS°vEk             , pass: 0
+afin que                  -> afine              ,expect: af5k                , pass: 0
+commencerait              -> kom@stRozj§        ,expect: kom@s°RE            , pass: 0
+bades                     -> bldak              ,expect: bad                 , pass: 0
+abyssin                   -> apist              ,expect: abis5               , pass: 0
+pseudobulbaire            -> ps2RtuZaRiz        ,expect: ps2dobylbER         , pass: 0
+révéliez                  -> epRevalist         ,expect: Revelje             , pass: 0
+épargnerez                -> epaRs°Re           ,expect: epaRN°Re            , pass: 0
+audiovisuel               -> j§bitik9R          ,expect: odjoviz8El          , pass: 0
+fusionnés                 -> fynjoR             ,expect: fyzjone             , pass: 0
+agi                       -> aZin               ,expect: aZi                 , pass: 0
+invisible                 -> 5filizit°m@        ,expect: 5vizibl             , pass: 0
+droitière                 -> iRotRijo           ,expect: dRwatjER            , pass: 0
+maigres                   -> m5gRa              ,expect: mEgR                , pass: 0
+repais                    -> R°pER              ,expect: R°pE                , pass: 0
+silicone                  -> sifijon            ,expect: silikOn             , pass: 0
+nouvel                    -> nuvjER             ,expect: nuvEl               , pass: 0
+verset                    -> vERs°m@            ,expect: vERsE               , pass: 0
+codes                     -> k§boz              ,expect: kOd                 , pass: 0
+faignant                  -> fEnsE              ,expect: fEN@                , pass: 0
+abaissera                 -> ab@diR             ,expect: abEs°Ra             , pass: 0
+octogonaux                -> Otom§dRast         ,expect: Oktogono            , pass: 0
+insatisfaites             -> nEkstisobe         ,expect: 5satisfEt           , pass: 0
+récup                     -> RekyR              ,expect: Rekyp               , pass: 0
+pakistano                 -> pasifat§           ,expect: pakistano           , pass: 0
+saccageant                -> SastaRj            ,expect: sakaZ@              , pass: 0
+originels                 -> ORdinotRi          ,expect: oRiZinEl            , pass: 0
+weimarienne               -> iv@tiRje           ,expect: vajmaRjEn           , pass: 0
+contez                    -> k§tyR              ,expect: k§te                , pass: 0
+agitant                   -> aZis@t             ,expect: aZit@               , pass: 0
+bancs                     -> b@ko               ,expect: b@                  , pass: 0
+coudre                    -> kuN9R              ,expect: kudR                , pass: 0
+suspecter                 -> syskyRE            ,expect: syspEkte            , pass: 0
+mnémotechnique            -> minotgOk°Rj        ,expect: mnemotEknik         , pass: 0
+luthériens                -> lystREsj§          ,expect: lyteRj5             , pass: 0
+gaffe                     -> gavE               ,expect: gaf                 , pass: 0
+percerez                  -> EspR°m9R           ,expect: pERs°Re             , pass: 0
+saillante                 -> salinak            ,expect: saj@t               , pass: 0
+endormît                  -> nosjot9R           ,expect: @dORmi              , pass: 0
+thérapeutique             -> teRapyteik         ,expect: teRap2tik           , pass: 0
+refaits                   -> R°fERs             ,expect: R°fE                , pass: 0
+sexagénaire               -> sesj@tRE           ,expect: seksaZenER          , pass: 0
+oppressaient              -> opseREsjo          ,expect: opResE              , pass: 0
+objecteront               -> b§t°R§             ,expect: ObZEkt°R§           , pass: 0
+parenthèses               -> paREstine          ,expect: paR@tEz             , pass: 0
+clopiner                  -> polinaRjE          ,expect: klopine             , pass: 0
+fournir                   -> fun°Ri             ,expect: fuRniR              , pass: 0
+apoplectique              -> apolitRomE         ,expect: apoplEktik          , pass: 0
+savaient                  -> EsmalEk            ,expect: savE                , pass: 0
+longévité                 -> l§glim°R§          ,expect: l§Zevite            , pass: 0
+permalloy                 -> pERmol°RE          ,expect: pERmalOj            , pass: 0
+débordant                 -> debORd°Ra          ,expect: debORd@             , pass: 0
+marchait                  -> mabRije            ,expect: maRSE               , pass: 0
+écartez                   -> etaRk°le           ,expect: ekaRte              , pass: 0
+couffins                  -> OpsikyR            ,expect: kuf5                , pass: 0
+habitat                   -> abita              ,expect: abita               , pass: 0
+innocentes                -> nj5t°m@s            ,expect: inos@t              , pass: 0
+non-initié                -> n5Zinak§           ,expect: nOninisje           , pass: 0
+quarante-deuxième         -> SaSetul°Ri         ,expect: kaR@td2zjEm         , pass: 0
+haut-parleurs             -> otyRasj§           ,expect: opaRl9R             , pass: 0
+suggérant                 -> sygZERsifl         ,expect: sygZeR@             , pass: 0
+préséniles                -> pResER             ,expect: pRezenil            , pass: 0
+exosquelette              -> EktomEkswaR        ,expect: Egzosk2lEt          , pass: 0
+homophile                 -> §potik9R           ,expect: omofil              , pass: 0
+concrétisant              -> k§stR°Rj§          ,expect: k§kRetiz@           , pass: 0
+vaccinant                 -> vakutalize         ,expect: vaksin@             , pass: 0
+diction                   -> distik§            ,expect: diksj§              , pass: 0
+zappant                   -> pabEn              ,expect: zap@                , pass: 0
+rebondissaient            -> R°nosiflE          ,expect: R°b§disE            , pass: 0
+émaciés                   -> emasjER            ,expect: emasje              , pass: 0
+tiennes                   -> t5N§               ,expect: tjEn                , pass: 0
+pédé                      -> sepeli             ,expect: pede                , pass: 0
+contredire                -> k§tER°Rje          ,expect: k§tR°diR            , pass: 0
+intervertissons           -> 5tERsipetaRj§      ,expect: 5tERvERtis§         , pass: 0
+emballées                 -> @bal°Ra            ,expect: @bale               , pass: 0
+détonant                  -> det§n°m@           ,expect: deton@              , pass: 0
+égalités                  -> egadist            ,expect: egalite             , pass: 0
+oeils-de-perdrix          -> j§pstabiz°m@       ,expect: 9jd°pERdRi          , pass: 0
+épaississement            -> epasis             ,expect: epesis°m@           , pass: 0
+rapprochai                -> apROsjeRa          ,expect: RapRoSE             , pass: 0
+colvert                   -> s§vol°Ra           ,expect: kOlvER              , pass: 0
+becter                    -> bEst°RE            ,expect: bEkte               , pass: 0
+bivouacs                  -> bjoviz°m@          ,expect: bivwak              , pass: 0
+bouthéon                  -> but°n9R            ,expect: bute§               , pass: 0
+guette                    -> gEt                ,expect: gEt                 , pass: 0
+promise                   -> pRomize            ,expect: pRomiz              , pass: 0
+languissamment            -> l@tis@             ,expect: l@gisam@            , pass: 0
+masturbé                  -> m2zatyRe           ,expect: mastyRbe            , pass: 0
+attende                   -> at@d8a             ,expect: at@d                , pass: 0
+escortait                 -> EkstRamjz          ,expect: EskORtE             , pass: 0
+sujet                     -> yzE                ,expect: syZE                , pass: 0
+raccommodez               -> SRakomiRas         ,expect: Rakomode            , pass: 0
+nones                     -> nOs                ,expect: nOn                 , pass: 0
+enculerie                 -> @suje              ,expect: @kyl°Ri             , pass: 0
+communicante              -> kumEstonEl         ,expect: komynik@t           , pass: 0
+trottiné                  -> tRitwaR            ,expect: tRotine             , pass: 0
+becquet                   -> bEkt9R             ,expect: bekE                , pass: 0
+canne                     -> k@no               ,expect: kan                 , pass: 0
+coronale                  -> O§tRone            ,expect: koRonal             , pass: 0
+friandises                -> fRidjan            ,expect: fRij@diz            , pass: 0
+indignant                 -> 5dinj@bl           ,expect: 5diN@               , pass: 0
+planquée                  -> p@dylEt            ,expect: pl@ke               , pass: 0
+enseignée                 -> @sj5               ,expect: @seNe               , pass: 0
+écorchures                -> meRokyRE           ,expect: ekORSyR             , pass: 0
+débilite                  -> debilite           ,expect: debilit             , pass: 0
+archet                    -> aREste             ,expect: aRSE                , pass: 0
+prisait                   -> pRizER             ,expect: pRizE               , pass: 0
+stoïques                  -> sotisjOn           ,expect: stoik               , pass: 0
+dissimulions              -> disizonje          ,expect: disimylj§           , pass: 0
+exaspérez                 -> Ekstav°RE          ,expect: EgzaspeRe           , pass: 0
+fallût                    -> flaSE              ,expect: faly                , pass: 0
+dévouera                  -> divERte            ,expect: devuRa              , pass: 0
+brise                     -> bRikE              ,expect: bRiz                , pass: 0
+récupérâmes               -> RepyR@t9R          ,expect: RekypeRam           , pass: 0
+fritures                  -> fRkt8iRe           ,expect: fRityR              , pass: 0
+redevînt                  -> R°dwane            ,expect: R°d°v5              , pass: 0
+noueux                    -> nOky               ,expect: nw2                 , pass: 0
+siégeraient               -> syZeRERsj§         ,expect: sjeZ°RE             , pass: 0
+supportai                 -> supRtaRje          ,expect: sypORtE             , pass: 0
+typhique                  -> titikyR            ,expect: tifik               , pass: 0
+déterminer                -> dez5tRem@tR        ,expect: detERmine           , pass: 0
+sondait                   -> sinatozi           ,expect: s§dE                , pass: 0
+passage                   -> aspil              ,expect: pasaZ               , pass: 0
+poinçonnait               -> pw5sonER           ,expect: pw5sonE             , pass: 0
+escroquera                -> EkstRomatRi        ,expect: EskROk°Ra           , pass: 0
+gêne                      -> Z°n@               ,expect: ZEn                 , pass: 0
+pine                      -> pjEn               ,expect: pin                 , pass: 0
+hébraïques                -> gRafEksje          ,expect: ebRaik              , pass: 0
+galéasses                 -> galeZe             ,expect: galeas              , pass: 0
+lancerait                 -> l@t°RE             ,expect: l@s°RE              , pass: 0
+boucharde                 -> bus°loRe           ,expect: buSaRd              , pass: 0
+leurrais                  -> libReR§            ,expect: l9RE                , pass: 0
+recensé                   -> R°m@tR             ,expect: R°s@se              , pass: 0
+modern style              -> modR@t2z           ,expect: modERnstil          , pass: 0
+diastole                  -> distalize          ,expect: djastOl             , pass: 0
+briquerait                -> bRit°RE            ,expect: bRik°RE             , pass: 0
+inoubliable               -> il§tipyRaZ         ,expect: inublijabl          , pass: 0
+renfrogne                 -> R@fuR°me           ,expect: R@fRON              , pass: 0
+suspensif                 -> sypsj@             ,expect: sysp@sif            , pass: 0
+trayeuses                 -> tREj2z             ,expect: tREj2z              , pass: 0
+affûter                   -> afyRma             ,expect: afyte               , pass: 0
+citrine                   -> sitRim8e           ,expect: sitRin              , pass: 0
+boucle                    -> bul@te             ,expect: bukl                , pass: 0
+abrupt                    -> abRiky             ,expect: abRypt              , pass: 0
+méfier                    -> mefjRte            ,expect: mefje               , pass: 0
+papillotants              -> palikatRis         ,expect: papijot@            , pass: 0
+sioux                     -> sjosj              ,expect: sju                 , pass: 0
+marquait                  -> matRijyR           ,expect: maRkE               , pass: 0
+buteras                   -> byst°RE            ,expect: byt°Ra              , pass: 0
+pètesec                   -> sEptizm            ,expect: pEtsEk              , pass: 0
+pluviométrie              -> filozeRikOs        ,expect: plyvjometRi         , pass: 0
+détroits                  -> detRisje           ,expect: detRwa              , pass: 0
+tarderions                -> taRiogyRa          ,expect: taRd°Rj§            , pass: 0
+amassé                    -> amaze              ,expect: amase               , pass: 0
+jam-session               -> Z@ka               ,expect: dZamsesj9n          , pass: 0
+guipures                  -> g9SpRi             ,expect: gipyR               , pass: 0
+surencombrée              -> syREks°daR         ,expect: syR@k§bRe           , pass: 0
+enveloppe                 -> @v°lok9R           ,expect: @v°lOp              , pass: 0
+spécifier                 -> spERmiziR§         ,expect: spesifje            , pass: 0
+distançons                -> dist@k8i           ,expect: dist@s§             , pass: 0
+irradié                   -> iRigaRd            ,expect: iRadje              , pass: 0
+créole                    -> kRol°Re            ,expect: kReOl               , pass: 0
+espionnez                 -> Ekslise            ,expect: Espjone             , pass: 0
+caissette                 -> asiz°t@            ,expect: kEsEt               , pass: 0
+croup                     -> kuRb2              ,expect: kRup                , pass: 0
+dénigrent                 -> denynER            ,expect: denigR              , pass: 0
+nattées                   -> tem@te             ,expect: nate                , pass: 0
+goélands                  -> Z§gl°m@            ,expect: goel@               , pass: 0
+tremblotant               -> tR@blat9R          ,expect: tR@blot@            , pass: 0
+enjôlée                   -> @l°m9R             ,expect: @Zole               , pass: 0
+déguisée                  -> degyziRe           ,expect: degize              , pass: 0
+remplaceriez              -> R°kavEs°Ri         ,expect: R@plas°Rje          , pass: 0
+perforées                 -> pERfoRe            ,expect: pERfoRe             , pass: 0
+mélancolieux              -> mel@kolik          ,expect: mel@kolj2           , pass: 0
+piccolo                   -> pwasiRal           ,expect: pikolo              , pass: 0
+disparaissante            -> dispaRdizaR        ,expect: dispaREs@t          , pass: 0
+rebutés                   -> R°byte             ,expect: R°byte              , pass: 0
+entrechoque               -> @tR°Suv            ,expect: @tR°SOk             , pass: 0
+broya                     -> biRaj§             ,expect: bRwaja              , pass: 0
+parés                     -> saRve              ,expect: paRe                , pass: 0
+indexée                   -> 5netiv             ,expect: 5dEkse              , pass: 0
+excuseriez                -> EksteRj§           ,expect: Ekskyz°Rje          , pass: 0
+gaffa                     -> gavER              ,expect: gafa                , pass: 0
+furibondes                -> fyRjonaR           ,expect: fyRib§d             , pass: 0
+attablons                 -> atalonje           ,expect: atabl§              , pass: 0
+toluène                   -> tolinje            ,expect: tol8En              , pass: 0
+flambeaux                 -> flamasif           ,expect: fl@bo               , pass: 0
+exubérante                -> EkstyRabl          ,expect: EgzybeR@t           , pass: 0
+boulochait                -> bul@tivE           ,expect: buloSE              , pass: 0
+gercé                     -> ZERse              ,expect: ZERse               , pass: 0
+manades                   -> mald@te            ,expect: manad               , pass: 0
+sororal                   -> s§bR°RE            ,expect: soRoRal             , pass: 0
+vespéral                  -> vEspeRje           ,expect: vEspeRal            , pass: 0
+égyptologue               -> eegutylORZ@        ,expect: eZiptolOg           , pass: 0
+empapaouté                -> @kafit°Ra          ,expect: @papaute            , pass: 0
+illégitime                -> iligRasj§          ,expect: ileZitim            , pass: 0
+prunelle                  -> pR2nyR             ,expect: pRynEl              , pass: 0
+statue                    -> statyf             ,expect: staty               , pass: 0
+ratissés                  -> RasiR              ,expect: Ratise              , pass: 0
+postillon                 -> positonER          ,expect: pOstij§             , pass: 0
+mordillant                -> §waRaliz°m@        ,expect: mORdij@             , pass: 0
+interlocuteur             -> 5tERsuRvat         ,expect: 5tERlokyt9R         , pass: 0
+énervez                   -> nefERt°R§          ,expect: enERve              , pass: 0
+refaçonner                -> R@paz°m§           ,expect: R2fasOne            , pass: 0
+ordinateurs               -> ORdinatje          ,expect: ORdinat9R           , pass: 0
+fouinait                  -> fijonE             ,expect: fwinE               , pass: 0
+naviguez                  -> nEvjot9R           ,expect: navige              , pass: 0
+normalement               -> n§oRaZ@s           ,expect: nORmal°m@           , pass: 0
+baladins                  -> balita             ,expect: balad5              , pass: 0
+estomaqués                -> Estj@tR            ,expect: Estomake            , pass: 0
+finaux                    -> fj@                ,expect: fino                , pass: 0
+effondreraient            -> @fRosjam           ,expect: ef§dR°RE            , pass: 0
+orgiastiques              -> oRadisjonE         ,expect: ORZjastik           , pass: 0
+vagues                    -> vEgle              ,expect: vag                 , pass: 0
+résidente                 -> ReziN°R§           ,expect: Rezid@t             , pass: 0
+reviendra                 -> R°vEdRim           ,expect: R°vj5dRa            , pass: 0
+closent                   -> klonite            ,expect: kloz                , pass: 0
+policiers                 -> pwazoonER          ,expect: polisje             , pass: 0
+outarde                   -> otuRER             ,expect: utaRd               , pass: 0
+surhomme                  -> suRmyR             ,expect: syROm               , pass: 0
+bougre                    -> bun°Re             ,expect: bugR                , pass: 0
+exécutez                  -> Egzetyt°Ri         ,expect: Egzekyte            , pass: 0
+cm                        -> kimo               ,expect: s@timEtR            , pass: 0
+dragonnades               -> deRononast         ,expect: dRagonad            , pass: 0
+hôpital                   -> Ostiliv@           ,expect: opital              , pass: 0
+triompherons              -> tRikORdOR          ,expect: tRij§f°R§           , pass: 0
+anti-flingage             -> @tisjoneZin        ,expect: @tifl5gaZ           , pass: 0
+discrétionnaires          -> 5distRokiz°R§      ,expect: diskResjonER        , pass: 0
+dégustation               -> degyst°RE          ,expect: degystasj§          , pass: 0
+assigne                   -> asiN               ,expect: asiN                , pass: 0
+verrat                    -> nEvR°Ra            ,expect: vERa                , pass: 0
+cultiveras                -> syblikER           ,expect: kyltiv°Ra           , pass: 0
+fulgurations              -> fygatyR§           ,expect: fylgyRasj§          , pass: 0
+gravitationnelles         -> gRamis°RE          ,expect: gRavitasjonEl       , pass: 0
+oisivement                -> §pitwazite         ,expect: waziv°m@            , pass: 0
+épaulé                    -> epaRl              ,expect: epole               , pass: 0
+secondes                  -> s°m§sj§            ,expect: s°g§d               , pass: 0
+enfouies                  -> @fusj§             ,expect: @fwi                , pass: 0
+redingote                 -> R§dNat9R           ,expect: R°d5gOt             , pass: 0
+tombera                   -> t§s°Rje            ,expect: t§b°Ra              , pass: 0
+non-prolifération         -> n§koRobatist       ,expect: n§pRolifeRasj§      , pass: 0
+aîné                      -> naR                ,expect: ene                 , pass: 0
+tétraplégie               -> teteRofliz         ,expect: tetRapleZi          , pass: 0
+murmurants                -> myRyseR@           ,expect: myRmyR@             , pass: 0
+arc-boutais               -> aRkabuRi           ,expect: aRkbutE             , pass: 0
+champions                 -> SomosE             ,expect: S@pj§               , pass: 0
+arrêta                    -> atRave             ,expect: aREta               , pass: 0
+bibliophilique            -> bjabifijasj§       ,expect: biblijofilik        , pass: 0
+Successes: 0/2000, ratio: 0.0
+Failures: 2000/2000

@@ -11,6 +11,10 @@ os.environ["KERAS_BACKEND"] = "torch"
 import numpy as np
 import keras
 from pathlib import Path
+import math
+import sys
+
+import _model_inference as mi
 
 dirpath = Path(__file__).parent.absolute()
 
@@ -19,9 +23,43 @@ batch_size = 64  # Batch size for training. (bigger batch size = faster training
 epochs = 10  # Number of epochs to train for. (an epoch is a full iteration over samples, so the bigger, the more accurate and the slower the training is)
 latent_dim = 256  # Latent dimensionality of the encoding space. (number of LSTMs in layer? TODO: search)
 num_samples = 1000  # Number of samples to train on.
+
+do_test_after_training = 1
+
+# overriding defaults with command line arguments
+if len(sys.argv) > 1:
+    if (len(sys.argv) - 1) % 2 != 0:
+        print("Usage: python train_model.py <param_name> <param_value> ...")
+        sys.exit(1)
+        
+    for i in range(1, len(sys.argv), 2):
+        param = sys.argv[i]
+        value = sys.argv[i+1]
+        if (param == "-b"):
+            batch_size = int(value)
+        elif (param == "-e"):
+            epochs = int(value)
+        elif (param == "-s"):
+            num_samples = int(value)
+        elif(param == "-t"):
+            do_test_after_training = int(value)
+        else:
+            print(f"Unknown parameter: {param}")
+            sys.exit(1)
+
+test_samples_start = math.floor(num_samples * 0.9)
+
+# print config
+print(f"- batch_size: {batch_size}")
+print(f"- epochs: {epochs}")
+print(f"- num_samples (total): {num_samples}")
+print(f"  * for training: {math.floor(0.8 * (test_samples_start))}")
+print(f"  * for validation: {math.floor(0.2 * (test_samples_start))}")
+print(f"  * for testing (used if testing enabled, excluded from training in all cases): {num_samples - test_samples_start}")
+
 # Path to the data txt file on disk.
 print("Using randomized csv with seed: 1")
-data_path = os.path.join(dirpath, "..", "out", "lexique_minimal_seed-1.csv")
+data_path = os.path.join(dirpath, "..", "input_csv", "lexique_minimal_seed-1.csv")
 
 
 
@@ -40,8 +78,10 @@ input_characters.add(" ")
 target_characters.add(" ")
 with open(data_path, "r", encoding="utf-8") as f:
     lines = f.read().split("\n")
+    # remove header line
+    lines = lines[1:]
 # 1: and num_sample+1 are here to ignore the headers line of the csv file
-for line in lines[1 : min(num_samples+1, len(lines) - 1)]:
+for line in lines[: min(test_samples_start, len(lines) - 1)]:
     input_text, target_text, _ = line.split(",")
     
     # We use "tab" as the "start sequence" character
@@ -60,12 +100,12 @@ input_characters = sorted(list(input_characters))
 target_characters = sorted(list(target_characters))
 num_encoder_tokens = len(input_characters) # each character is a token
 num_decoder_tokens = len(target_characters)
-# max_encoder_seq_length = max([len(txt) for txt in input_texts])
-# max_decoder_seq_length = max([len(txt) for txt in target_texts])
-max_encoder_seq_length = 64
-max_decoder_seq_length = 64
+max_encoder_seq_length = max([len(txt) for txt in input_texts])
+max_decoder_seq_length = max([len(txt) for txt in target_texts])
+# max_encoder_seq_length = 64
+# max_decoder_seq_length = 64
 
-print("Number of samples:", len(input_texts))
+# print("Number of samples:", len(input_texts))
 print("Number of unique input tokens:", num_encoder_tokens)
 print("Number of unique output tokens:", num_decoder_tokens)
 print("Max sequence length for inputs:", max_encoder_seq_length)
@@ -156,6 +196,75 @@ model.fit(
     validation_split=0.2, # fraction of validation data
 )
 # Save model
+print("Saving the model...")
 if not os.path.exists('models'):
     os.makedirs('models')
-model.save(os.path.join(dirpath, "..", "models", f"fr2phon_{batch_size}b_{epochs}e_{num_samples}s_{latent_dim}ld_{max_encoder_seq_length}esl_{max_decoder_seq_length}dsl_seed-1.keras"))
+model_name = f"fr2phon_{batch_size}b_{epochs}e_{num_samples}s_{latent_dim}ld_{max_encoder_seq_length}esl_{max_decoder_seq_length}dsl_seed-1_0.1tv.keras"
+model.save(os.path.join(dirpath, "..", "models", model_name))
+
+print("Model saved as", model_name)
+# Save tokens
+print("Saving tokens...")
+with open(os.path.join(dirpath, "..", "models", model_name + ".input.tokens"), "w", encoding="utf-8") as f:
+    f.write(";".join(f"{i},{char}" for i, char in input_token_index.items()))
+with open(os.path.join(dirpath, "..", "models", model_name + ".target.tokens"), "w", encoding="utf-8") as f:
+    f.write(";".join(f"{i},{char}" for i, char in target_token_index.items()))
+
+print("Data saved.")
+
+# TODO factoring with test_n_from.py
+# === test the model ===
+if (do_test_after_training == 0):
+    sys.exit(0)
+
+print("Testing the model...")
+encoder_model, decoder_model, _ = mi.restore_model(model_name, dirpath)
+restored_target_token_index = mi.restore_token_index(model_name, dirpath, "target")
+restored_input_token_index = mi.restore_token_index(model_name, dirpath, "input")
+
+# for seq_index in range(20):
+#     # Take one sequence (part of the training set)
+#     # for trying out decoding.
+#     input_seq = encoder_input_data[seq_index : seq_index + 1]
+#     decoded_sentence = mi.decode_sequence(input_seq, encoder_model, decoder_model, target_token_index, max_decoder_seq_length)
+#     print(f"-{seq_index}-")
+#     print("Input sentence:", input_texts[seq_index])
+#     print("Decoded sentence:", decoded_sentence)
+    
+# print("================================================")
+# print("================================================")
+# print("================================================")
+
+count = 0
+successes = 0
+failures = 0
+
+for seq_index in range(test_samples_start, num_samples):
+    # trying out decoding.
+    
+    input_text, target_text, _ = lines[seq_index].split(",")
+
+    input_seq = mi.encode_text(input_text, max_decoder_seq_length, restored_input_token_index)
+    decoded_sentence = mi.decode_sequence(input_seq, encoder_model, decoder_model, model_name, restored_target_token_index)
+    
+    # trim whitespaces
+    decoded_sentence = decoded_sentence.strip()
+    target_text = target_text.strip()
+    
+    success = decoded_sentence == target_text
+    input_length = len(input_text)
+    decoded_length = len(decoded_sentence)
+    target_length = len(target_text)
+    spaces_tab_input = " " * max(0,(25 - input_length))
+    spaces_tab_decoded = " " * max(0,(20 - decoded_length))
+    spaces_tab_target = " " * max(0,(20 - target_length))
+    print(f"{input_text + spaces_tab_input} -> {decoded_sentence.replace("\n","") + spaces_tab_decoded},expect: {target_text + spaces_tab_target}, pass: {success}")
+    
+    count += 1
+    if success:
+        successes += 1
+    else:
+        failures += 1
+        
+print(f"Successes: {successes}/{count}, ratio: {successes/count}")
+print(f"Failures: {failures}/{count}")
