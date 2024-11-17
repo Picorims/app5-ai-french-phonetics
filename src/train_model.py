@@ -6,7 +6,15 @@
 # Based on: https://keras.io/examples/nlp/lstm_seq2seq/
 
 import os
-os.environ["KERAS_BACKEND"] = "torch"
+os.environ["KERAS_BACKEND"] = "tensorflow"
+
+from tensorflow.python.client import device_lib
+print("Available devices:")
+print(device_lib.list_local_devices())
+print(")))))")
+import tensorflow as tf
+print("Num GPUs Available: ", len(tf.config.experimental.list_physical_devices('GPU')))
+print("===")
 
 import numpy as np
 import keras
@@ -199,7 +207,7 @@ model.fit(
 print("Saving the model...")
 if not os.path.exists('models'):
     os.makedirs('models')
-model_name = f"fr2phon_{batch_size}b_{epochs}e_{num_samples}s_{latent_dim}ld_{max_encoder_seq_length}esl_{max_decoder_seq_length}dsl_seed-1_0.1tv.keras"
+model_name = f"fr2phon-tf_{batch_size}b_{epochs}e_{num_samples}s_{latent_dim}ld_{max_encoder_seq_length}esl_{max_decoder_seq_length}dsl_seed-1_0.1tv.keras"
 model.save(os.path.join(dirpath, "..", "models", model_name))
 
 print("Model saved as", model_name)

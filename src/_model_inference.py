@@ -4,7 +4,7 @@
 # Alexis Hu, Maxime Lebot
 
 import os
-os.environ["KERAS_BACKEND"] = "torch"
+os.environ["KERAS_BACKEND"] = "tensorflow"
 
 import keras
 import numpy as np
