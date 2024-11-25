@@ -9,6 +9,7 @@ import os
 os.environ["KERAS_BACKEND"] = "torch"
 
 import numpy as np
+import pandas as pd
 import keras
 from pathlib import Path
 import math
@@ -188,7 +189,7 @@ print("Training the model...")
 model.compile(
     optimizer="rmsprop", loss="categorical_crossentropy", metrics=["accuracy"]
 )
-model.fit(
+history = model.fit(
     [encoder_input_data, decoder_input_data], # inputs
     decoder_target_data, # outputs
     batch_size=batch_size, # size of batches triggering updates of the model based on errors
@@ -209,6 +210,12 @@ with open(os.path.join(dirpath, "..", "models", model_name + ".input.tokens"), "
     f.write(";".join(f"{i},{char}" for i, char in input_token_index.items()))
 with open(os.path.join(dirpath, "..", "models", model_name + ".target.tokens"), "w", encoding="utf-8") as f:
     f.write(";".join(f"{i},{char}" for i, char in target_token_index.items()))
+    
+# Save training history
+print("Saving training history...")
+history_df = pd.DataFrame(history.history)
+with open(os.path.join(dirpath, "..", "models", model_name + ".history.csv"), "w", encoding="utf-8") as f:
+    history_df.to_csv(f, index_label="epoch")
 
 print("Data saved.")
 
