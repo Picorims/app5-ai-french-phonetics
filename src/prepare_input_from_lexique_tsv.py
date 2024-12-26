@@ -12,7 +12,19 @@ df = pd.read_csv(sys.argv[1], sep='\t')
 
 # Only the ortho and phon columns are relevant, so we get rid of other columns
 print("Extracting ortho and phon columns...")
-minimalDf = df[["ortho","phon","syll"]] # word, phonetics, phonetics with syllabus decomposition
+minimalDf = df[[
+    "ortho", # word
+    "phon", # phonetics
+    "syll", # phonetics with syllabus decomposition
+    "genre", # genre
+    "nombre", # number
+    "nbhomogr", # homographs
+    "nbhomoph", # homophones
+    "islem", # is a lemma
+    "nblettres", # number of letters
+    "nbphons", # number of phonetic characters
+    "nbsyll", # number of syllables
+]] 
 
 # Create a variant with randomized order
 # see: https://stackoverflow.com/questions/29576430/shuffle-dataframe-rows
