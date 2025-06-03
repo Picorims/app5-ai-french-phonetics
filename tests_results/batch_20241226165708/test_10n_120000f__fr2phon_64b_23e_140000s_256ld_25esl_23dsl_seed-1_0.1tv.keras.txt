@@ -1,0 +1,13 @@
+-120000, 0- roués                     -> Rue                 ,expect: Rwe                 , pass: False
+-120001, 1- économisera               -> ekonomiz°Ra         ,expect: ekonomiz°Ra         , pass: True
+-120002, 2- épuisera                  -> ep8iz°Ra            ,expect: ep8iz°Ra            , pass: True
+-120003, 3- encriers                  -> @kRiRE              ,expect: @kRije              , pass: False
+-120004, 4- ancienneté                -> @sjEn°me            ,expect: @sjEn°te            , pass: False
+-120005, 5- coupe-pâte                -> kup°patE            ,expect: kuppat              , pass: False
+-120006, 6- maigre                    -> megER               ,expect: mEgR                , pass: False
+-120007, 7- sarcleuse                 -> saRkl2z2z           ,expect: saRkl2z             , pass: False
+-120008, 8- concassées                -> k§kase              ,expect: k§kase              , pass: True
+-120009, 9- redire                    -> R°dRije             ,expect: R°diR               , pass: False
+Successes: 3/10, percent: 30.0%
+Failures: 7/10
+Median similarity: 0.8660714285714286

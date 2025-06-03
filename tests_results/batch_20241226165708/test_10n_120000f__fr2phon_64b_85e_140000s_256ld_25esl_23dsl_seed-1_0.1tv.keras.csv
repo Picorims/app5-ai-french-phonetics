@@ -1,0 +1,11 @@
+index, input, decoded, target, pass, ortho,phon,syll,genre,nombre,nbhomogr,nbhomoph,islem,nblettres,nbphons,nbsyll
+120000, roués, Rwaz, Rwe, False, roués,Rwe,Rwe,m,p,2,7,0,5,3,1
+120001, économisera, ekonomiz°Ra, ekonomiz°Ra, True, économisera,ekonomiz°Ra,e-ko-no-mi-z°-Ra,,,1,1,0,11,11,6
+120002, épuisera, ep8iz°Ra, ep8iz°Ra, True, épuisera,ep8iz°Ra,e-p8i-z°-Ra,,,1,2,0,8,8,4
+120003, encriers, @kRiRE, @kRije, False, encriers,@kRije,@-kRi-je,m,p,1,2,0,8,6,3
+120004, ancienneté, @sjEn°te, @sjEn°te, True, ancienneté,@sjEn°te,@-sjE-n°-te,f,s,1,1,1,10,8,4
+120005, coupe-pâte, kuppaptE, kuppat, False, coupe-pâte,kuppat,kup-pat,m,s,1,1,1,10,6,2
+120006, maigre, mEgRE, mEgR, False, maigre,mEgR,mEgR,,s,2,4,1,6,4,1
+120007, sarcleuse, EskRal2z°m, saRkl2z, False, sarcleuse,saRkl2z,saR-kl2z,f,s,1,1,0,9,7,2
+120008, concassées, k§kasez, k§kase, False, concassées,k§kase,k§-ka-se,f,p,1,5,0,10,6,3
+120009, redire, R°dRije, R°diR, False, redire,R°diR,R°-diR,,,1,1,1,6,5,2
