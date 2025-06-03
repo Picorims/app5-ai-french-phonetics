@@ -16,6 +16,7 @@ minimalDf = df[[
     "ortho", # word
     "phon", # phonetics
     "syll", # phonetics with syllabus decomposition
+    "cgram", # grammatical category
     "genre", # genre
     "nombre", # number
     "nbhomogr", # homographs

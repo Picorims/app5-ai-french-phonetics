@@ -5,6 +5,7 @@
 
 # Based on: https://keras.io/examples/nlp/lstm_seq2seq/
 
+import datetime
 import os
 os.environ["KERAS_BACKEND"] = "torch"
 
@@ -26,6 +27,7 @@ latent_dim = 256  # Latent dimensionality of the encoding space. (number of LSTM
 num_samples = 1000  # Number of samples to train on.
 
 do_test_after_training = 1
+save_model_after_each_epoch = 0
 
 # overriding defaults with command line arguments
 if len(sys.argv) > 1:
@@ -44,6 +46,8 @@ if len(sys.argv) > 1:
             num_samples = int(value)
         elif(param == "-t"):
             do_test_after_training = int(value)
+        elif(param == "-i"):
+            save_model_after_each_epoch = int(value)
         else:
             print(f"Unknown parameter: {param}")
             sys.exit(1)
@@ -83,7 +87,9 @@ with open(data_path, "r", encoding="utf-8") as f:
     lines = lines[1:]
 # 1: and num_sample+1 are here to ignore the headers line of the csv file
 for line in lines[: min(test_samples_start, len(lines) - 1)]:
-    input_text, target_text, _ = line.split(",")
+    line_data = line.split(",")
+    input_text = line_data[0]
+    target_text = line_data[1]
     
     # We use "tab" as the "start sequence" character
     # for the targets, and "\n" as "end sequence" character.
@@ -186,6 +192,21 @@ model = keras.Model([encoder_inputs, decoder_inputs], decoder_outputs)
 # === Train the model ===
 print("Training the model...")
 
+if not os.path.exists('models'):
+    os.makedirs('models')
+
+batch_dir_name = "batch_"+datetime.datetime.now().strftime("%Y%m%d%H%M%S")
+batch_dir_path = "models/"+batch_dir_name
+if (save_model_after_each_epoch == 1):
+    os.makedirs(batch_dir_path)
+
+class CustomSaver(keras.callbacks.Callback):
+    def on_epoch_end(self, epoch, logs={}):
+        if (save_model_after_each_epoch == 1):
+            model_name = f"fr2phon_{batch_size}b_{epoch+1}e_{num_samples}s_{latent_dim}ld_{max_encoder_seq_length}esl_{max_decoder_seq_length}dsl_seed-1_0.1tv.keras"
+            model.save(os.path.join(batch_dir_path, model_name))
+            print(f"Model saved as {model_name} for epoch {epoch+1}")
+
 model.compile(
     optimizer="rmsprop", loss="categorical_crossentropy", metrics=["accuracy"]
 )
@@ -195,11 +216,10 @@ history = model.fit(
     batch_size=batch_size, # size of batches triggering updates of the model based on errors
     epochs=epochs, # iterations
     validation_split=0.2, # fraction of validation data
+    callbacks=[CustomSaver()]
 )
 # Save model
 print("Saving the model...")
-if not os.path.exists('models'):
-    os.makedirs('models')
 model_name = f"fr2phon_{batch_size}b_{epochs}e_{num_samples}s_{latent_dim}ld_{max_encoder_seq_length}esl_{max_decoder_seq_length}dsl_seed-1_0.1tv.keras"
 model.save(os.path.join(dirpath, "..", "models", model_name))
 
@@ -211,11 +231,23 @@ with open(os.path.join(dirpath, "..", "models", model_name + ".input.tokens"), "
 with open(os.path.join(dirpath, "..", "models", model_name + ".target.tokens"), "w", encoding="utf-8") as f:
     f.write(";".join(f"{i},{char}" for i, char in target_token_index.items()))
     
+if (save_model_after_each_epoch == 1):
+    # also save tokens in batch directory
+    with open(os.path.join(dirpath, "..", "models", batch_dir_name, batch_dir_name + ".input.tokens"), "w", encoding="utf-8") as f:
+        f.write(";".join(f"{i},{char}" for i, char in input_token_index.items()))
+    with open(os.path.join(dirpath, "..", "models", batch_dir_name, batch_dir_name + ".target.tokens"), "w", encoding="utf-8") as f:
+        f.write(";".join(f"{i},{char}" for i, char in target_token_index.items()))
+    
 # Save training history
 print("Saving training history...")
 history_df = pd.DataFrame(history.history)
 with open(os.path.join(dirpath, "..", "models", model_name + ".history.csv"), "w", encoding="utf-8") as f:
     history_df.to_csv(f, index_label="epoch")
+
+if (save_model_after_each_epoch == 1):
+    # also save history in batch directory
+    with open(os.path.join(dirpath, "..", "models", batch_dir_name, batch_dir_name + ".history.csv"), "w", encoding="utf-8") as f:
+        history_df.to_csv(f, index_label="epoch")
 
 print("Data saved.")
 
@@ -249,7 +281,9 @@ failures = 0
 for seq_index in range(test_samples_start, num_samples):
     # trying out decoding.
     
-    input_text, target_text, _ = lines[seq_index].split(",")
+    line_data = lines[seq_index].split(",")
+    input_text = line_data[0]
+    target_text = line_data[1]
 
     input_seq = mi.encode_text(input_text, max_decoder_seq_length, restored_input_token_index)
     decoded_sentence = mi.decode_sequence(input_seq, encoder_model, decoder_model, model_name, restored_target_token_index)

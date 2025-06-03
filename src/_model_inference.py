@@ -9,11 +9,15 @@ os.environ["KERAS_BACKEND"] = "torch"
 import keras
 import numpy as np
 
-def restore_model(name, dirpath):
+def restore_model(name, dirpath, use_path_as_is=False):
     print(f"restoring model {name}")
     # Define sampling models
     # Restore the model and construct the encoder and decoder.
-    model = keras.models.load_model(os.path.join(dirpath,"..","models",name))
+    model = None
+    if use_path_as_is:
+        model = keras.models.load_model(os.path.join(dirpath, name))
+    else:
+        model = keras.models.load_model(os.path.join(dirpath,"..","models",name))
 
     latent_dim = int(name.split("_")[4][:-2])
     max_decoder_seq_length = int(name.split("_")[6][:-3])
@@ -43,7 +47,7 @@ def restore_model(name, dirpath):
     
     return (encoder_model, decoder_model, max_decoder_seq_length)
 
-def restore_token_index(model_name, dirpath, kind):
+def restore_token_index(model_name, dirpath, kind,  use_path_as_is=False):
     """restore the token from the file matching the model name and kind
 
     Args:
@@ -55,7 +59,12 @@ def restore_token_index(model_name, dirpath, kind):
         _type_: _description_
     """
     target_token_index = dict()
-    with open(os.path.join(dirpath,"..","models",f"{model_name}.{kind}.tokens"), "r", encoding="utf-8") as f:
+    tokens_path = None
+    if use_path_as_is:
+        tokens_path = os.path.join(dirpath, f"{model_name}.{kind}.tokens")
+    else:
+        tokens_path = os.path.join(dirpath,"..","models",f"{model_name}.{kind}.tokens")
+    with open(tokens_path, "r", encoding="utf-8") as f:
         file_str = f.read()
         # print("===========")
         # print(file_str)
